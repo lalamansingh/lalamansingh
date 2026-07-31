@@ -53,7 +53,7 @@ Product-minded operator who turns ambiguous problems into structured PRDs, user 
 
 ## 💼 Experience
 
-### 🚀 Product Manager — Growth & Strategy (Freelance)
+### 🚀Growth & Strategy  (Freelance)
 **IndusLabs** · <img src="https://img.shields.io/badge/Sep%202025%20—%20Present-06D6A0?style=flat-square" />
 
 Leading growth and strategy for a **Voice AI product** — owning market positioning, growth-lever identification, and go-to-market strategy for voice-based user interactions. Translating usage patterns and user feedback into a structured growth roadmap, working closely with engineering to prioritize features that move retention and adoption.
