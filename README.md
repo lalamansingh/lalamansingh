@@ -44,7 +44,7 @@ Product-minded operator who turns ambiguous problems into structured PRDs, user 
 
 ## Experience
 
-**aGrowth & Strategy (Freelance)**
+**Growth & Strategy (Freelance)**
 IndusLabs · *Sep 2025 — Present*
 Leading growth and strategy for a Voice AI product — owning market positioning, growth-lever identification, and go-to-market strategy for voice-based user interactions. Translating usage patterns and user feedback into a structured growth roadmap, working closely with engineering to prioritize features that move retention and adoption.
 
