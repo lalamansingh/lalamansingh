@@ -29,7 +29,6 @@ Product-minded operator who turns ambiguous problems into structured PRDs, user 
 <p align="center">
   <img src="https://img.shields.io/badge/25+-PRDs%20Written-F72585?style=for-the-badge" />
   <img src="https://img.shields.io/badge/8x-Hackathon%20Wins-7209B7?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/3-Domains-4361EE?style=for-the-badge" />
   <img src="https://img.shields.io/badge/1-Startup%200→1-4CC9F0?style=for-the-badge" />
 </p>
 
@@ -49,9 +48,6 @@ Product-minded operator who turns ambiguous problems into structured PRDs, user 
 
 **Execution**
 <img src="https://img.shields.io/badge/Cross--functional%20Coordination-06D6A0?style=flat-square" /> <img src="https://img.shields.io/badge/QA%20%26%20Edge--Case%20Testing-1B9AAA?style=flat-square" /> <img src="https://img.shields.io/badge/Stakeholder%20Validation-118AB2?style=flat-square" /> <img src="https://img.shields.io/badge/Documentation%20Discipline-073B4C?style=flat-square" />
-
-**Domain Interest**
-<img src="https://img.shields.io/badge/Speech%2FVoice%20AI-FFD166?style=flat-square&color=FFD166&logoColor=black" /> <img src="https://img.shields.io/badge/Conversational%20Feedback%20Loops-FFB703?style=flat-square" /> <img src="https://img.shields.io/badge/Business%20Analytics-FB8500?style=flat-square" />
 
 <br/>
 
