@@ -1,221 +1,279 @@
-<!--
-MIDNIGHT / AURORA — GitHub profile for Lal Aman Singh
-Paste this file into your profile repository README.md.
-Palette: midnight #0D1117 · lavender #A78BFA · cyan #67E8F9
-External SVG services power the banner and typing effect; availability may vary.
-Add your real Notion URL before enabling the optional portfolio link below.
-Experience dates and achievements are retained from the supplied profile.
--->
+<!-- ═══════════════════════════════════════════════════════════════
+     LAL AMAN SINGH · PREMIUM GITHUB PROFILE
+     Theme: Obsidian × Electric Violet × Cyan
+     GitHub supports Markdown + safe HTML; animated effects use SVG services.
+════════════════════════════════════════════════════════════════ -->
 
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=rounded&amp;color=0:0D1117,45:172554,100:312E81&amp;height=230&amp;section=header&amp;text=LAL%20AMAN%20SINGH&amp;fontSize=46&amp;fontColor=F8FAFC&amp;animation=fadeIn&amp;fontAlignY=43&amp;desc=PRODUCT%20MANAGEMENT%20%20%2F%20%20STRATEGY%20%20%2F%20%200%20TO%201&amp;descSize=14&amp;descAlignY=64" alt="Lal Aman Singh — Product Management / Strategy / 0 to 1" />
-</p>
+<div align="center">
 
-<p align="center">
-  <b>From ambiguous problems to products people use.</b>
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,35:172554,70:4C1D95,100:020617&height=260&section=header&text=LAL%20AMAN%20SINGH&fontSize=50&fontColor=F8FAFC&animation=fadeIn&fontAlignY=38&desc=PRODUCT%20THINKER%20%E2%80%A2%200%E2%86%921%20BUILDER%20%E2%80%A2%20PROBLEM%20SOLVER&descSize=15&descAlignY=58" alt="Lal Aman Singh" />
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;weight=500&amp;size=18&amp;duration=3200&amp;pause=1200&amp;color=A78BFA&amp;center=true&amp;vCenter=true&amp;width=600&amp;height=45&amp;lines=Product+Manager+%C2%B7+0%E2%86%921+Builder;Growth%2C+strategy+%26+founding+operations;8%C3%97+National+Hackathon+Winner;Fintech+%C2%B7+E-commerce+%C2%B7+Voice+AI" alt="Product Manager · 0 to 1 Builder · 8× National Hackathon Winner" />
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/lalamansingh/"><img src="https://img.shields.io/badge/LINKEDIN-172554?style=for-the-badge&amp;logo=linkedin&amp;logoColor=67E8F9" alt="LinkedIn" /></a>
-  &nbsp;
-  <a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/LET'S_TALK-312E81?style=for-the-badge&amp;logo=gmail&amp;logoColor=E9D5FF" alt="Email Lal Aman Singh" /></a>
-  <!-- Add your real Notion URL here: <a href="YOUR_NOTION_URL">PRD Portfolio ↗</a> -->
-</p>
-
-<p align="center">
-  <sub>Noida, India &nbsp; / &nbsp; Fintech &nbsp; / &nbsp; E-commerce &nbsp; / &nbsp; Voice AI</sub>
-</p>
-
-<p align="center">
-  <a href="#about">About</a> &nbsp; · &nbsp;
-  <a href="#selected-work">Selected work</a> &nbsp; · &nbsp;
-  <a href="#experience">Experience</a> &nbsp; · &nbsp;
-  <a href="#toolkit">Toolkit</a> &nbsp; · &nbsp;
-  <a href="#connect">Connect</a>
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=21&duration=2600&pause=900&color=A78BFA&center=true&vCenter=true&repeat=true&random=false&width=760&height=55&lines=I+turn+unclear+problems+into+clear+products.;PRDs+%E2%86%92+Roadmaps+%E2%86%92+Execution+%E2%86%92+Impact;Building+across+Fintech%2C+Commerce+%26+Voice+AI.;8%C3%97+National+Hackathon+Winner+%F0%9F%8F%86" alt="Animated introduction" />
 
 <br />
 
+<a href="https://www.linkedin.com/in/lalamansingh/"><img src="https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge&logo=linkedin&logoColor=67E8F9&labelColor=0F172A" alt="LinkedIn" /></a>
+ 
+<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/Let's_Talk-0F172A?style=for-the-badge&logo=gmail&logoColor=A78BFA&labelColor=0F172A" alt="Email" /></a>
+ 
+<a href="https://github.com/lalamansingh?tab=repositories"><img src="https://img.shields.io/badge/Explore_My_Work-0F172A?style=for-the-badge&logo=github&logoColor=F8FAFC&labelColor=0F172A" alt="Repositories" /></a>
+
+<br /><br />
+
+<img src="https://komarev.com/ghpvc/?username=lalamansingh&label=PROFILE+VISITORS&color=7C3AED&style=flat-square" alt="Profile visitors" />
+<img src="https://img.shields.io/github/followers/lalamansingh?label=COMMUNITY&style=flat-square&color=0891B2&labelColor=0F172A" alt="GitHub followers" />
+
+</div>
+
+<br />
+
+<div align="center">
+  <a href="#-about-me">About</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-what-i-do">Capabilities</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-my-product-system">Product System</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-tools--technology">Tools</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#-github-pulse">GitHub</a>
+</div>
+
+<br />
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:7C3AED,100:06B6D4&height=2&section=header" alt="section divider" />
+
+◈ About Me
+
 <table>
-  <tr>
-    <td align="center" width="33%"><h2>25+</h2><b>PRDs written</b><br /><sub>Turning problems into clear specs</sub><br /><br /></td>
-    <td align="center" width="33%"><h2>8×</h2><b>National hackathon wins</b><br /><sub>Product ownership under pressure</sub><br /><br /></td>
-    <td align="center" width="33%"><h2>0 → 1</h2><b>Startup execution</b><br /><sub>From concept to first paying customer</sub><br /><br /></td>
-  </tr>
+<tr>
+<td width="62%" valign="top">
+
+I am a Product Manager and 0→1 builder who enjoys working where the problem is still unclear and the path has not been defined.
+
+I study users, uncover the real problem, convert insights into structured product requirements, prioritize what matters, and coordinate execution until the idea becomes something people can actually use.
+
+My strongest interests are Fintech, E-commerce, Voice AI, growth, and early-stage products.
+
+DISCOVER  →  DEFINE  →  PRIORITIZE  →  BUILD  →  VALIDATE  →  ITERATE
+
+</td>
+<td width="38%" align="center" valign="middle">
+
+My Numbers
+
+25+ Product PRDs
+8× National Hackathon Winner
+1 Startup taken from 0→1
+∞ Curiosity for hard problems
+
+</td>
+</tr>
 </table>
 
 <br />
 
-<a id="about"></a>
-
-01 / About
-
-I'm a product-minded operator working at the intersection of user problems, business priorities, and execution.
-
-I turn ambiguity into PRDs, user stories, root-cause analyses, and prioritized roadmaps across fintech, e-commerce, and voice AI. As the first operational hire at an early-stage startup, I helped take an idea from zero to its first paying customer.
-
-Understand the problem. Define what matters. Build, validate, and iterate.
-
-<br />
-
-<a id="selected-work"></a>
-
-02 / Selected work
-
-<sub>Independent product case studies and analyses.</sub>
+◈ What I Do
 
 <table>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>01 &nbsp; / &nbsp; VOICE AI · UX STRATEGY</sub>
-      <h3>Vocallabs.ai</h3>
-      <p>A full UX teardown and competitive benchmark against Retell AI, Vapi, Bland AI, and Synthflow.</p>
-      <p><b>Deliverable</b><br />14-section report with prioritized fixes.</p>
-      <sub>UX AUDIT &nbsp; / &nbsp; COMPETITIVE ANALYSIS</sub>
-    </td>
-    <td width="50%" valign="top">
-      <sub>02 &nbsp; / &nbsp; FINTECH · TRUST</sub>
-      <h3>Paytm</h3>
-      <p>Root-cause analysis and a phased product specification for failed UPI transaction resolution.</p>
-      <p><b>Deliverable</b><br />RCA + PRD across MVP, expansion, and future phases.</p>
-      <sub>ROOT-CAUSE ANALYSIS &nbsp; / &nbsp; PHASED DELIVERY</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>03 &nbsp; / &nbsp; QUICK COMMERCE · RISK</sub>
-      <h3>Zepto</h3>
-      <p>A risk-trigger detection framework addressing refund fraud, with requirements prioritized for engineering handoff.</p>
-      <p><b>Deliverable</b><br />P0/P1 prioritized product specification.</p>
-      <sub>RISK DETECTION &nbsp; / &nbsp; PRIORITIZATION</sub>
-    </td>
-    <td width="50%" valign="top">
-      <sub>04 &nbsp; / &nbsp; E-COMMERCE · EXPERIENCE</sub>
-      <h3>Flipkart</h3>
-      <p>End-to-end mapping of order tracking and cancellation, translating user flows into clear requirements.</p>
-      <p><b>Deliverable</b><br />User flows with detailed acceptance criteria.</p>
-      <sub>USER JOURNEYS &nbsp; / &nbsp; ACCEPTANCE CRITERIA</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" valign="top">
-      <sub>05 &nbsp; / &nbsp; FASHION COMMERCE · INTEGRITY</sub>
-      <h3>Myntra</h3>
-      <p>Incentivized review integrity: structured problem framing and a phased rollout plan.</p>
-      <sub>PROBLEM DEFINITION &nbsp; / &nbsp; ROLLOUT STRATEGY</sub>
-    </td>
-  </tr>
+<tr>
+<td width="50%" valign="top">
+
+🔍 Discover the real problem
+
+User and stakeholder interviews
+
+Customer feedback synthesis
+
+Root-cause analysis using 5 Whys
+
+User journey and pain-point mapping
+
+Competitor and market analysis
+
+</td>
+<td width="50%" valign="top">
+
+🧭 Shape the product
+
+Product requirement documents
+
+User stories and acceptance criteria
+
+Feature scoping and requirement definition
+
+MVP and phased rollout planning
+
+Product strategy and roadmaps
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+⚡ Drive execution
+
+RICE and P0/P1 prioritization
+
+Cross-functional coordination
+
+Sprint and roadmap tracking
+
+Risk, dependency, and blocker management
+
+Release notes and documentation
+
+</td>
+<td width="50%" valign="top">
+
+📈 Improve the outcome
+
+Product and growth metrics
+
+QA and edge-case testing
+
+Experiment and feedback loops
+
+Adoption and retention thinking
+
+Go-to-market planning
+
+</td>
+</tr>
 </table>
 
 <br />
 
-<a id="experience"></a>
+◈ My Product System
 
-03 / Experience
+<div align="center">
 
-CLOSETRUSH Pvt. Ltd. · Gurugram
+01 · DISCOVER
 
-Founding Operations Intern   ·   Sep 2025 — Feb 2026
+02 · DEFINE
 
-First operational hire at a D2C bedsheet rental subscription startup. Owned execution from concept to the first paying customer, building acquisition strategy, sales processes, and partnership channels from scratch.
+03 · DECIDE
 
-RYM Grenergy · Gurugram
+04 · DELIVER
 
-Business Analyst Intern   ·   Jul 2025 — Sep 2025
+05 · LEARN
 
-Translated customer conversations into scoped requirements alongside the sales team. Demonstrated the company's AI-powered speech/voice model to prospects and owned the feedback loop.
+User research
 
-PeerHub · Noida
+Problem statement
 
-Operations Intern   ·   Jun 2025 — Jul 2025
-
-Built partnerships with educational institutions and coaching centers, coordinating onboarding for ~800 students and execution of 25+ courses and mentorship sessions.
-
-<br />
-
-<a id="toolkit"></a>
-
-04 / Toolkit
-
-<p>
-  <img src="https://img.shields.io/badge/Figma-161B22?style=for-the-badge&amp;logo=figma&amp;logoColor=A78BFA" alt="Figma" />
-  <img src="https://img.shields.io/badge/Notion-161B22?style=for-the-badge&amp;logo=notion&amp;logoColor=FFFFFF" alt="Notion" />
-  <img src="https://img.shields.io/badge/Jira-161B22?style=for-the-badge&amp;logo=jira&amp;logoColor=67E8F9" alt="Jira" />
-  <img src="https://img.shields.io/badge/SQL-161B22?style=for-the-badge&amp;logo=postgresql&amp;logoColor=67E8F9" alt="SQL" />
-  <img src="https://img.shields.io/badge/Python-161B22?style=for-the-badge&amp;logo=python&amp;logoColor=A78BFA" alt="Python" />
-</p>
-
-Focus
-
-What I bring
-
-Product definition
-
-PRDs, user stories, requirement scoping, root-cause analysis
-
-Prioritization & delivery
-
-RICE, P0/P1, roadmap tracking, release notes
+RICE / P0-P1
 
 Cross-functional execution
 
-Stakeholder validation, coordination, documentation
+Metrics
 
-Quality & feedback
+Feedback
 
-QA, edge-case testing, customer feedback loops
+PRD
 
-Growth & strategy
+MVP scope
 
-Market positioning, acquisition, partnerships, go-to-market planning
+QA & release
+
+User feedback
+
+Market signals
+
+User stories
+
+Roadmap
+
+Documentation
+
+Iteration
+
+</div>
 
 <br />
 
-05 / Recognition & education
+◈ Product Domains
 
-8× National Hackathon Winner
+<div align="center">
 
-Led end-to-end product development as Product Owner during 24–48 hour sprints, defining strategy, roadmap, and value proposition.
+<img src="https://img.shields.io/badge/FINTECH-020617?style=for-the-badge&logo=razorpay&logoColor=67E8F9" alt="Fintech" />
+<img src="https://img.shields.io/badge/E--COMMERCE-020617?style=for-the-badge&logo=shopify&logoColor=A78BFA" alt="E-commerce" />
+<img src="https://img.shields.io/badge/VOICE_AI-020617?style=for-the-badge&logo=googleassistant&logoColor=67E8F9" alt="Voice AI" />
+<img src="https://img.shields.io/badge/GROWTH-020617?style=for-the-badge&logo=googleanalytics&logoColor=A78BFA" alt="Growth" />
+<img src="https://img.shields.io/badge/0%E2%86%921_PRODUCTS-020617?style=for-the-badge&logo=rocket&logoColor=67E8F9" alt="0 to 1 Products" />
 
-B.Tech · Computer Science and Engineering
-Lloyd Institute of Engineering and Technology · AKTU
-Sep 2024 — Aug 2028 (Expected)   ·   CGPA: 7.5
+</div>
+
+<br />
+
+◈ Tools & Technology
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=figma,notion,jira,postgres,py,github,vscode&theme=dark&perline=7" alt="Figma, Notion, Jira, PostgreSQL, Python, GitHub and VS Code" />
+
+<br /><br />
+
+<img src="https://img.shields.io/badge/PRD_Writing-111827?style=flat-square&logoColor=white" alt="PRD Writing" />
+<img src="https://img.shields.io/badge/User_Stories-111827?style=flat-square&logoColor=white" alt="User Stories" />
+<img src="https://img.shields.io/badge/5_Whys-111827?style=flat-square&logoColor=white" alt="5 Whys" />
+<img src="https://img.shields.io/badge/RICE-111827?style=flat-square&logoColor=white" alt="RICE" />
+<img src="https://img.shields.io/badge/Agile-111827?style=flat-square&logoColor=white" alt="Agile" />
+<img src="https://img.shields.io/badge/Kanban-111827?style=flat-square&logoColor=white" alt="Kanban" />
+<img src="https://img.shields.io/badge/SQL-111827?style=flat-square&logoColor=white" alt="SQL" />
+<img src="https://img.shields.io/badge/Python-111827?style=flat-square&logoColor=white" alt="Python" />
+
+</div>
 
 <br />
 
 <details>
-<summary><b>GitHub / Activity & languages ↗</b></summary>
-
+<summary><b>◈ How I approach a new product problem</b></summary>
 <br />
 
-<!-- These third-party cards can be unavailable or rate limited. Core profile content above remains readable. -->
+Start with the user: Who faces the problem, and how painful is it?
 
-<p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=lalamansingh&amp;show_icons=true&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=A78BFA&amp;icon_color=67E8F9&amp;text_color=CBD5E1&amp;ring_color=A78BFA" alt="Lal Aman Singh's GitHub statistics" />
-  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lalamansingh&amp;layout=compact&amp;hide_border=true&amp;bg_color=0D1117&amp;title_color=A78BFA&amp;text_color=CBD5E1" alt="Most-used languages in public repositories" />
-</p>
+Find the root cause: Separate the visible symptom from the real issue.
 
-<p align="center"><a href="https://github.com/lalamansingh?tab=repositories">Explore my repositories ↗</a></p>
+Define success: Choose the user outcome and business metric that matter.
+
+Prioritize sharply: Balance impact, effort, confidence, and urgency.
+
+Ship the smallest valuable version: Test the key assumption early.
+
+Learn from reality: Use data and feedback to decide the next iteration.
 
 </details>
 
 <br />
 
-<a id="connect"></a>
+◈ GitHub Pulse
 
-<p align="center"><sub>HAVE AN INTERESTING PROBLEM?</sub></p>
-<h2 align="center">Let's build something that matters.</h2>
-<p align="center">Product strategy, voice AI, and taking ideas from 0 → 1.</p>
-<p align="center">
-  <a href="mailto:lalamansingh7303@gmail.com"><b>Start a conversation ↗</b></a>
-  &nbsp; · &nbsp;
-  <a href="https://www.linkedin.com/in/lalamansingh/">Connect on LinkedIn ↗</a>
-</p>
+<div align="center">
 
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&amp;color=0:312E81,50:172554,100:0D1117&amp;height=5&amp;section=footer" alt="" />
-</p>
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=lalamansingh&show_icons=true&hide_border=true&bg_color=020617&title_color=A78BFA&icon_color=67E8F9&text_color=CBD5E1&ring_color=8B5CF6" alt="Lal Aman Singh's GitHub statistics" />
+<img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lalamansingh&layout=compact&hide_border=true&bg_color=020617&title_color=A78BFA&text_color=CBD5E1" alt="Most-used languages" />
+
+<br />
+
+<img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=lalamansingh&bg_color=020617&color=A78BFA&line=06B6D4&point=F8FAFC&area=true&area_color=4C1D95&hide_border=true&custom_title=Contribution%20Journey" alt="Contribution activity graph" />
+
+</div>
+
+<br />
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:7C3AED,100:06B6D4&height=2&section=header" alt="section divider" />
+
+<div align="center">
+
+<sub>HAVE A PROBLEM WORTH SOLVING?</sub>
+
+Let's turn it into a product.
+
+Product strategy · Voice AI · Fintech · E-commerce · 0→1 building
+
+<br />
+
+<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/START_A_CONVERSATION-4C1D95?style=for-the-badge&logo=gmail&logoColor=white" alt="Start a conversation" /></a>
+
+<br /><br />
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,40:172554,75:4C1D95,100:020617&height=120&section=footer" alt="Footer" />
+
+</div>
