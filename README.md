@@ -1,67 +1,70 @@
 <!-- ═══════════════════════════════════════════════════════════════
-     LAL AMAN SINGH · PREMIUM GITHUB PROFILE
-     Theme: Obsidian × Electric Violet × Cyan
-     GitHub supports Markdown + safe HTML; animated effects use SVG services.
+     LAL AMAN SINGH · CYBER-NINJA / GENJI THEMED PROFILE
+     Theme: Dragonblade Emerald (#00F59B) × Cyber Teal (#00E5FF) × Carbon Matrix (#06090F)
 ════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,35:172554,70:4C1D95,100:020617&height=260&section=header&text=LAL%20AMAN%20SINGH&fontSize=50&fontColor=F8FAFC&animation=fadeIn&fontAlignY=38&desc=PRODUCT%20THINKER%20%E2%80%A2%200%E2%86%921%20BUILDER%20%E2%80%A2%20PROBLEM%20SOLVER&descSize=15&descAlignY=58" alt="Lal Aman Singh" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:030712,25:064E3B,60:059669,85:00F59B,100:00E5FF&height=270&section=header&text=LAL%20AMAN%20SINGH&fontSize=48&fontColor=FFFFFF&animation=fadeIn&fontAlignY=36&desc=%E2%9A%94%EF%B8%8F%200%E2%86%921%20PRODUCT%20ARCHITECT%20%E2%80%A2%20HACKATHON%20CHAMPION%20%E2%80%A2%20STRATEGIST&descSize=14&descAlignY=58" alt="Lal Aman Singh" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&weight=700&size=21&duration=2600&pause=900&color=A78BFA&center=true&vCenter=true&repeat=true&random=false&width=760&height=55&lines=I+turn+unclear+problems+into+clear+products.;PRDs+%E2%86%92+Roadmaps+%E2%86%92+Execution+%E2%86%92+Impact;Building+across+Fintech%2C+Commerce+%26+Voice+AI.;8%C3%97+National+Hackathon+Winner+%F0%9F%8F%86" alt="Animated introduction" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2500&pause=1000&color=00F59B&center=true&vCenter=true&repeat=true&random=false&width=750&height=50&lines=I+turn+ambiguous+chaos+into+high-impact+products.;8%C3%97+National+Hackathon+Winner+%E2%9A%94%EF%B8%8F;Building+at+the+intersection+of+Fintech%2C+Voice+AI+%26+Commerce.;25%2B+PRDs+Shipped+%E2%80%A2+1+Startup+Scaled+from+0%E2%86%921" alt="Animated Terminal Directive" />
 
 <br />
 
-<a href="https://www.linkedin.com/in/lalamansingh/"><img src="https://img.shields.io/badge/LinkedIn-0F172A?style=for-the-badge&logo=linkedin&logoColor=67E8F9&labelColor=0F172A" alt="LinkedIn" /></a>
- 
-<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/Let's_Talk-0F172A?style=for-the-badge&logo=gmail&logoColor=A78BFA&labelColor=0F172A" alt="Email" /></a>
- 
-<a href="https://github.com/lalamansingh?tab=repositories"><img src="https://img.shields.io/badge/Explore_My_Work-0F172A?style=for-the-badge&logo=github&logoColor=F8FAFC&labelColor=0F172A" alt="Repositories" /></a>
+<a href="https://www.linkedin.com/in/lalamansingh/"><img src="https://img.shields.io/badge/LINKEDIN-090D16?style=for-the-badge&logo=linkedin&logoColor=00E5FF&labelColor=090D16" alt="LinkedIn" /></a>
+&nbsp;
+<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/DIRECT_TRANSMISSION-090D16?style=for-the-badge&logo=gmail&logoColor=00F59B&labelColor=090D16" alt="Email" /></a>
+&nbsp;
+<a href="https://github.com/lalamansingh?tab=repositories"><img src="https://img.shields.io/badge/DEPLOYED_PROJECTS-090D16?style=for-the-badge&logo=github&logoColor=F8FAFC&labelColor=090D16" alt="Repositories" /></a>
 
 <br /><br />
 
-<img src="https://komarev.com/ghpvc/?username=lalamansingh&label=PROFILE+VISITORS&color=7C3AED&style=flat-square" alt="Profile visitors" />
-<img src="https://img.shields.io/github/followers/lalamansingh?label=COMMUNITY&style=flat-square&color=0891B2&labelColor=0F172A" alt="GitHub followers" />
+<img src="https://komarev.com/ghpvc/?username=lalamansingh&label=OPERATOR_VISITS&color=059669&style=flat-square" alt="Visitor Counter" />
+<img src="https://img.shields.io/github/followers/lalamansingh?label=NETWORK&style=flat-square&color=00F59B&labelColor=090D16" alt="GitHub Network" />
 
 </div>
 
 <br />
 
 <div align="center">
-  <a href="#-about-me">About</a>&nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-what-i-do">Capabilities</a>&nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-my-product-system">Product System</a>&nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-tools--technology">Tools</a>&nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="#-github-pulse">GitHub</a>
+  <a href="#identity"><code>[01 // IDENTITY]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#capabilities"><code>[02 // ARSENAL]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#product-engine"><code>[03 // PRODUCT ENGINE]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#domains"><code>[04 // SECTORS]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#tech-stack"><code>[05 // WEAPONRY]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#telemetry"><code>[06 // TELEMETRY]</code></a>&nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#connect"><code>[07 // TRANSMIT]</code></a>
 </div>
 
 <br />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:7C3AED,100:06B6D4&height=2&section=header" alt="section divider" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:030712,40:059669,70:00F59B,100:00E5FF&height=3&section=header" alt="Divider" />
 
-◈ About Me
+<h3 id="identity">⚔️ <code>[01 // IDENTITY & OPERATING DIRECTIVE]</code></h3>
 
 <table>
 <tr>
-<td width="62%" valign="top">
+<td width="60%" valign="top">
 
-I am a Product Manager and 0→1 builder who enjoys working where the problem is still unclear and the path has not been defined.
+#### 🐉 The 0→1 Product Builder
+I operate in high-ambiguity territory where the problem is ill-defined, the roadmap is unwritten, and velocity is decisive.
 
-I study users, uncover the real problem, convert insights into structured product requirements, prioritize what matters, and coordinate execution until the idea becomes something people can actually use.
+My directive is uncovering root human friction, stripping away noise through deep discovery, formulating crisp product requirement blueprints, and orchestrating cross-functional execution until theoretical concepts become battle-tested products people love.
 
-My strongest interests are Fintech, E-commerce, Voice AI, growth, and early-stage products.
-
-DISCOVER  →  DEFINE  →  PRIORITIZE  →  BUILD  →  VALIDATE  →  ITERATE
+* **Core Focus:** Fintech, Voice AI & Conversational Agents, E-commerce, 0→1 Platforms
+* **Operating Protocol:** `DISCOVER` ➔ `DEFINE` ➔ `PRIORITIZE` ➔ `BUILD` ➔ `VALIDATE` ➔ `SCALE`
 
 </td>
-<td width="38%" align="center" valign="middle">
+<td width="40%" align="center" valign="top">
 
-My Numbers
-
-25+ Product PRDs
-8× National Hackathon Winner
-1 Startup taken from 0→1
-∞ Curiosity for hard problems
+#### 🛡️ BATTLE METRICS
+```yaml
+PRDs & Product Specs  : 25+ Authored
+National Hackathons   : 8× Champion 🏆
+Startups Scaled (0→1) : 1 Shipped
+Problem Ambiguity     : 0% Tolerance
+Execution Velocity    : Maximum
+```
 
 </td>
 </tr>
@@ -69,70 +72,46 @@ My Numbers
 
 <br />
 
-◈ What I Do
+<h3 id="capabilities">⚡ <code>[02 // TACTICAL ARSENAL & CAPABILITIES]</code></h3>
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-🔍 Discover the real problem
-
-User and stakeholder interviews
-
-Customer feedback synthesis
-
-Root-cause analysis using 5 Whys
-
-User journey and pain-point mapping
-
-Competitor and market analysis
+#### 🔍 01. Recon & Problem Discovery
+* **Root-Cause Dissection:** 5-Whys methodology to isolate core structural friction from symptoms.
+* **User & Stakeholder Intel:** Qualitative user interviews, continuous customer telemetry, and empathy mapping.
+* **Journey Architecture:** Comprehensive user flow modeling and friction-point elimination.
+* **Market & Moat Analysis:** Aggressive competitor teardowns and value proposition design.
 
 </td>
 <td width="50%" valign="top">
 
-🧭 Shape the product
-
-Product requirement documents
-
-User stories and acceptance criteria
-
-Feature scoping and requirement definition
-
-MVP and phased rollout planning
-
-Product strategy and roadmaps
+#### 🧭 02. Product Architecture & Scoping
+* **PRDs & Feature Blueprints:** Crystal-clear requirement documents with zero ambiguity.
+* **User Stories & Acceptance Criteria:** Uncompromising edge-case and criteria definitions.
+* **MVP Boundary Scoping:** Precision-scoping the minimum surface area to validate hypotheses.
+* **Strategic Roadmaps:** Milestone sequencing aligned directly to revenue and adoption ROI.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-⚡ Drive execution
-
-RICE and P0/P1 prioritization
-
-Cross-functional coordination
-
-Sprint and roadmap tracking
-
-Risk, dependency, and blocker management
-
-Release notes and documentation
+#### ⚔️ 03. Execution & Sprint Command
+* **Prioritization Matrices:** RICE framework, MoSCoW scoping, and ruthless P0/P1 triage.
+* **Cross-Functional Sync:** Direct orchestration across Engineering, Design, QA, and GTM.
+* **Blocker Neutralization:** Early dependency discovery, risk mitigation, and friction removal.
+* **Release Governance:** Structured release notes, changelogs, and staged rollout checklists.
 
 </td>
 <td width="50%" valign="top">
 
-📈 Improve the outcome
-
-Product and growth metrics
-
-QA and edge-case testing
-
-Experiment and feedback loops
-
-Adoption and retention thinking
-
-Go-to-market planning
+#### 📈 04. Telemetry & Growth Loops
+* **North Star Funnels:** Defining and tracking core conversion and engagement metrics.
+* **Experimentation Cycles:** Rapid A/B testing, multivariate analysis, and feedback loops.
+* **QA & Edge-Case Guardrails:** Rigorous scenario testing for seamless user experiences.
+* **GTM & Product Adoption:** Distribution positioning, onboarding optimization, and retention loops.
 
 </td>
 </tr>
@@ -140,140 +119,101 @@ Go-to-market planning
 
 <br />
 
-◈ My Product System
+<h3 id="product-engine">⚙️ <code>[03 // THE 5-STAGE PRODUCT OPERATING SYSTEM]</code></h3>
+
+| 01. RECON | 02. BLUEPRINT | 03. TRIAGE | 04. DEPLOY | 05. SCALE |
+| :--- | :--- | :--- | :--- | :--- |
+| **User Research** | **PRD & Architecture** | **RICE Prioritization** | **Cross-Functional Sprint** | **Product Telemetry** |
+| Pain Point Mapping | User Story Specs | MVP Boundary Scoping | QA & Edge-Case Testing | A/B Experimentation |
+| 5-Whys Root Cause | Acceptance Criteria | MoSCoW Framework | Blocker Neutralization | User Feedback Loops |
+| Competitor Teardowns | Wireframes & Flows | Risk Assessment | Staged Release | Retention Optimization |
+
+<br />
+
+<h3 id="domains">🌐 <code>[04 // OPERATIONAL DOMAINS & SECTORS]</code></h3>
 
 <div align="center">
 
-01 · DISCOVER
-
-02 · DEFINE
-
-03 · DECIDE
-
-04 · DELIVER
-
-05 · LEARN
-
-User research
-
-Problem statement
-
-RICE / P0-P1
-
-Cross-functional execution
-
-Metrics
-
-Feedback
-
-PRD
-
-MVP scope
-
-QA & release
-
-User feedback
-
-Market signals
-
-User stories
-
-Roadmap
-
-Documentation
-
-Iteration
+<img src="https://img.shields.io/badge/FINTECH-06090F?style=for-the-badge&logo=razorpay&logoColor=00F59B&labelColor=06090F" alt="Fintech" />
+<img src="https://img.shields.io/badge/VOICE_AI-06090F?style=for-the-badge&logo=googleassistant&logoColor=00E5FF&labelColor=06090F" alt="Voice AI" />
+<img src="https://img.shields.io/badge/E--COMMERCE-06090F?style=for-the-badge&logo=shopify&logoColor=00F59B&labelColor=06090F" alt="E-Commerce" />
+<img src="https://img.shields.io/badge/0%E2%86%921_PLATFORMS-06090F?style=for-the-badge&logo=rocket&logoColor=00E5FF&labelColor=06090F" alt="0 to 1 Platforms" />
+<img src="https://img.shields.io/badge/GROWTH_SYSTEMS-06090F?style=for-the-badge&logo=googleanalytics&logoColor=00F59B&labelColor=06090F" alt="Growth Systems" />
 
 </div>
 
 <br />
 
-◈ Product Domains
+<h3 id="tech-stack">🛠️ <code>[05 // WEAPONRY & TOOLING]</code></h3>
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/FINTECH-020617?style=for-the-badge&logo=razorpay&logoColor=67E8F9" alt="Fintech" />
-<img src="https://img.shields.io/badge/E--COMMERCE-020617?style=for-the-badge&logo=shopify&logoColor=A78BFA" alt="E-commerce" />
-<img src="https://img.shields.io/badge/VOICE_AI-020617?style=for-the-badge&logo=googleassistant&logoColor=67E8F9" alt="Voice AI" />
-<img src="https://img.shields.io/badge/GROWTH-020617?style=for-the-badge&logo=googleanalytics&logoColor=A78BFA" alt="Growth" />
-<img src="https://img.shields.io/badge/0%E2%86%921_PRODUCTS-020617?style=for-the-badge&logo=rocket&logoColor=67E8F9" alt="0 to 1 Products" />
-
-</div>
-
-<br />
-
-◈ Tools & Technology
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=figma,notion,jira,postgres,py,github,vscode&theme=dark&perline=7" alt="Figma, Notion, Jira, PostgreSQL, Python, GitHub and VS Code" />
+<img src="https://skillicons.dev/icons?i=figma,notion,jira,postgres,py,github,vscode,postman&theme=dark&perline=8" alt="Figma, Notion, Jira, PostgreSQL, Python, GitHub, VS Code, Postman" />
 
 <br /><br />
 
-<img src="https://img.shields.io/badge/PRD_Writing-111827?style=flat-square&logoColor=white" alt="PRD Writing" />
-<img src="https://img.shields.io/badge/User_Stories-111827?style=flat-square&logoColor=white" alt="User Stories" />
-<img src="https://img.shields.io/badge/5_Whys-111827?style=flat-square&logoColor=white" alt="5 Whys" />
-<img src="https://img.shields.io/badge/RICE-111827?style=flat-square&logoColor=white" alt="RICE" />
-<img src="https://img.shields.io/badge/Agile-111827?style=flat-square&logoColor=white" alt="Agile" />
-<img src="https://img.shields.io/badge/Kanban-111827?style=flat-square&logoColor=white" alt="Kanban" />
-<img src="https://img.shields.io/badge/SQL-111827?style=flat-square&logoColor=white" alt="SQL" />
-<img src="https://img.shields.io/badge/Python-111827?style=flat-square&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/PRD_Writing-090D16?style=flat-square&logo=gitbook&logoColor=00F59B&labelColor=090D16" alt="PRD Writing" />
+<img src="https://img.shields.io/badge/User_Stories-090D16?style=flat-square&logo=target&logoColor=00E5FF&labelColor=090D16" alt="User Stories" />
+<img src="https://img.shields.io/badge/5_Whys_Analysis-090D16?style=flat-square&logoColor=00F59B&labelColor=090D16" alt="5 Whys" />
+<img src="https://img.shields.io/badge/RICE_Framework-090D16?style=flat-square&logoColor=00E5FF&labelColor=090D16" alt="RICE" />
+<img src="https://img.shields.io/badge/Agile_%2F_Scrum-090D16?style=flat-square&logo=scrumalliance&logoColor=00F59B&labelColor=090D16" alt="Agile" />
+<img src="https://img.shields.io/badge/SQL_Analytics-090D16?style=flat-square&logo=sqlite&logoColor=00E5FF&labelColor=090D16" alt="SQL Analytics" />
+<img src="https://img.shields.io/badge/Python_Scripting-090D16?style=flat-square&logo=python&logoColor=00F59B&labelColor=090D16" alt="Python Scripting" />
+<img src="https://img.shields.io/badge/GTM_Strategy-090D16?style=flat-square&logoColor=00E5FF&labelColor=090D16" alt="GTM Strategy" />
 
 </div>
 
 <br />
 
 <details>
-<summary><b>◈ How I approach a new product problem</b></summary>
+<summary><b>🐉 <code>[DEEP DIVE: THE 0→1 PROBLEM-SOLVING DOCTRINE]</code></b> (Click to expand)</summary>
 <br />
 
-Start with the user: Who faces the problem, and how painful is it?
-
-Find the root cause: Separate the visible symptom from the real issue.
-
-Define success: Choose the user outcome and business metric that matter.
-
-Prioritize sharply: Balance impact, effort, confidence, and urgency.
-
-Ship the smallest valuable version: Test the key assumption early.
-
-Learn from reality: Use data and feedback to decide the next iteration.
+1. **Deconstruct the Core Pain:** Pinpoint who is experiencing the problem, measure friction severity, and validate if it represents an existential urgency or minor inconvenience.
+2. **Attack the Root Cause:** Apply first-principles thinking and 5-Whys to disregard noise and address the real underlying bottleneck.
+3. **Define Measurable Success:** Establish the North Star user outcome and quantitative business KPIs prior to executing development.
+4. **Prioritize with Surgical Precision:** Balance impact, confidence, and engineering effort via RICE and strict P0/P1 boundaries.
+5. **Deploy the Minimum Viable Weapon:** Strip features down to the purest hypothesis-testing MVP and push to real users quickly.
+6. **Close the Telemetry Loop:** Harvest production metrics and qualitative user sentiment to fuel the next continuous deployment cycle.
 
 </details>
 
 <br />
 
-◈ GitHub Pulse
+<h3 id="telemetry">📊 <code>[06 // GITHUB TELEMETRY & ACTIVITY]</code></h3>
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=lalamansingh&show_icons=true&hide_border=true&bg_color=020617&title_color=A78BFA&icon_color=67E8F9&text_color=CBD5E1&ring_color=8B5CF6" alt="Lal Aman Singh's GitHub statistics" />
-<img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lalamansingh&layout=compact&hide_border=true&bg_color=020617&title_color=A78BFA&text_color=CBD5E1" alt="Most-used languages" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=lalamansingh&show_icons=true&hide_border=true&bg_color=06090F&title_color=00F59B&icon_color=00E5FF&text_color=E2E8F0&ring_color=10B981" alt="Lal Aman Singh's GitHub stats" />
+<img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lalamansingh&layout=compact&hide_border=true&bg_color=06090F&title_color=00F59B&text_color=E2E8F0" alt="Top Languages" />
 
 <br />
 
-<img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=lalamansingh&bg_color=020617&color=A78BFA&line=06B6D4&point=F8FAFC&area=true&area_color=4C1D95&hide_border=true&custom_title=Contribution%20Journey" alt="Contribution activity graph" />
+<img width="92%" src="https://github-readme-activity-graph.vercel.app/graph?username=lalamansingh&bg_color=06090F&color=00F59B&line=00E5FF&point=F8FAFC&area=true&area_color=064E3B&hide_border=true&custom_title=Contribution%20Telemetry" alt="Contribution graph" />
 
 </div>
 
 <br />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:7C3AED,100:06B6D4&height=2&section=header" alt="section divider" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:030712,40:059669,70:00F59B,100:00E5FF&height=3&section=header" alt="Divider" />
+
+<h3 id="connect">📡 <code>[07 // INITIATE TRANSMISSION]</code></h3>
 
 <div align="center">
 
-<sub>HAVE A PROBLEM WORTH SOLVING?</sub>
+### Have an ambitious 0→1 challenge or a high-stakes problem?
+Let's architect something unforgettable.
 
-Let's turn it into a product.
-
-Product strategy · Voice AI · Fintech · E-commerce · 0→1 building
+`Product Strategy` • `Voice AI` • `Fintech` • `E-Commerce` • `0→1 Execution`
 
 <br />
 
-<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/START_A_CONVERSATION-4C1D95?style=for-the-badge&logo=gmail&logoColor=white" alt="Start a conversation" /></a>
+<a href="mailto:lalamansingh7303@gmail.com"><img src="https://img.shields.io/badge/INITIATE_CONTACT-059669?style=for-the-badge&logo=gmail&logoColor=FFFFFF" alt="Initiate Contact" /></a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/lalamansingh/"><img src="https://img.shields.io/badge/CONNECT_ON_LINKEDIN-00E5FF?style=for-the-badge&logo=linkedin&logoColor=030712" alt="Connect on LinkedIn" /></a>
 
 <br /><br />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,40:172554,75:4C1D95,100:020617&height=120&section=footer" alt="Footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:030712,30:064E3B,70:059669,100:030712&height=120&section=footer" alt="Footer" />
 
 </div>
