@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="816" viewBox="0 0 1000 816" role="img">
+<defs><style>
+text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, &quot;Helvetica Neue&quot;, Helvetica, Inter, &quot;Segoe UI&quot;, Arial, sans-serif;}
+.up{animation:up 1.2s cubic-bezier(.25,.1,.25,1) both;}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style></defs>
+<rect width="1000" height="816" rx="28" fill="#f5f5f7"/>
+<text x="56" y="106" font-size="48" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.2" class="up d1">The process.</text><text x="56" y="144" font-size="21" font-weight="400" fill="#6e6e73" text-anchor="start" letter-spacing="-0.2" class="up d2">Every detail considered. From the first interview to launch day.</text>
+<g class="up d3"><rect x="56.0" y="184" width="282.6666666666667" height="400" rx="18" fill="#ffffff"/>
+<text x="86.0" y="242" font-size="24" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.5">Discover.</text>
+<text x="86.0" y="300" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">User research</text>
+<line x1="86.0" y1="316" x2="308.6666666666667" y2="316" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="340" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Requirements and PRDs</text>
+<line x1="86.0" y1="356" x2="308.6666666666667" y2="356" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="380" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">User stories</text>
+<line x1="86.0" y1="396" x2="308.6666666666667" y2="396" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="420" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">RICE and P0/P1 priorities</text>
+<line x1="86.0" y1="436" x2="308.6666666666667" y2="436" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="460" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Roadmaps</text>
+<line x1="86.0" y1="476" x2="308.6666666666667" y2="476" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="500" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Market research</text>
+<line x1="86.0" y1="516" x2="308.6666666666667" y2="516" stroke="#d2d2d7" stroke-width="1"/>
+<text x="86.0" y="540" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Competitive analysis</text>
+</g>
+<g class="up d4"><rect x="358.6666666666667" y="184" width="282.6666666666667" height="400" rx="18" fill="#ffffff"/>
+<text x="388.6666666666667" y="242" font-size="24" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.5">Deliver.</text>
+<text x="388.6666666666667" y="300" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Product launch</text>
+<line x1="388.6666666666667" y1="316" x2="611.3333333333334" y2="316" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="340" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Agile, Scrum and Kanban</text>
+<line x1="388.6666666666667" y1="356" x2="611.3333333333334" y2="356" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="380" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Testing, QA and edge cases</text>
+<line x1="388.6666666666667" y1="396" x2="611.3333333333334" y2="396" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="420" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Iterative development</text>
+<line x1="388.6666666666667" y1="436" x2="611.3333333333334" y2="436" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="460" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Cross-functional teams</text>
+<line x1="388.6666666666667" y1="476" x2="611.3333333333334" y2="476" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="500" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Stakeholder communication</text>
+<line x1="388.6666666666667" y1="516" x2="611.3333333333334" y2="516" stroke="#d2d2d7" stroke-width="1"/>
+<text x="388.6666666666667" y="540" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Technical presentations</text>
+</g>
+<g class="up d5"><rect x="661.3333333333334" y="184" width="282.6666666666667" height="400" rx="18" fill="#ffffff"/>
+<text x="691.3333333333334" y="242" font-size="24" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.5">Build with AI.</text>
+<text x="691.3333333333334" y="300" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Voice AI and speech-to-text</text>
+<line x1="691.3333333333334" y1="316" x2="914.0" y2="316" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="340" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">LLM prototyping</text>
+<line x1="691.3333333333334" y1="356" x2="914.0" y2="356" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="380" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">AI/ML product design</text>
+<line x1="691.3333333333334" y1="396" x2="914.0" y2="396" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="420" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Python for automation</text>
+<line x1="691.3333333333334" y1="436" x2="914.0" y2="436" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="460" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">SQL</text>
+<line x1="691.3333333333334" y1="476" x2="914.0" y2="476" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="500" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Figma flows and wireframes</text>
+<line x1="691.3333333333334" y1="516" x2="914.0" y2="516" stroke="#d2d2d7" stroke-width="1"/>
+<text x="691.3333333333334" y="540" font-size="16" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.1">Jira and Notion</text>
+</g>
+<g class="up d5"><rect x="56.0" y="604" width="434.0" height="156" rx="18" fill="#ffffff"/>
+<text x="88.0" y="650" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">Certified</text>
+<text x="88.0" y="690" font-size="23" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.5">Agile Project Management</text>
+<text x="88.0" y="720" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Professional Certificate, Atlassian. Aug 2026.</text>
+<rect x="408.5" y="632.5" width="49" height="29" rx="14.5" fill="none" stroke="#d2d2d7"/><text x="433.0" y="651.5" font-size="13" font-weight="400" fill="#1d1d1f" text-anchor="middle">Jira</text>
+<rect x="342.5" y="632.5" width="57" height="29" rx="14.5" fill="none" stroke="#d2d2d7"/><text x="371.0" y="651.5" font-size="13" font-weight="400" fill="#1d1d1f" text-anchor="middle">Agile</text>
+</g>
+<g class="up d6"><rect x="510.0" y="604" width="434.0" height="156" rx="18" fill="#ffffff"/>
+<text x="542.0" y="650" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">Community</text>
+<text x="542.0" y="690" font-size="23" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.5">Event Coordinator</text>
+<text x="542.0" y="720" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Lloyd Institute of Engineering and Technology. Dec 2025.</text>
+</g>
+</svg>

@@ -2,8 +2,8 @@
 """Generates the SVG panels used by README.md.
 
 Edit the content below and run:  python3 scripts/build_assets.py
-Every panel is 1000px wide and shares one set of design tokens, so spacing,
-type and colour stay consistent across the whole profile.
+Design system follows apple.com: SF Pro, #f5f5f7 canvases, white tiles,
+#1d1d1f type, #6e6e73 secondary type, #d2d2d7 hairlines.
 """
 from pathlib import Path
 from xml.sax.saxutils import escape
@@ -12,154 +12,101 @@ OUT = Path(__file__).resolve().parent.parent / "assets"
 OUT.mkdir(exist_ok=True)
 
 W = 1000
-PAD = 56  # outer margin inside every panel
+PAD = 56
 
-# ---------- design tokens ----------
-BG = "#000000"
-TILE = "#161617"
-TEXT = "#f5f5f7"
-TEXT2 = "#a1a1a6"
-TEXT3 = "#86868b"
-TEXT4 = "#6e6e73"
-GREEN = "#30d158"
-AI = ["#ff9f0a", "#ff375f", "#bf5af2", "#5e5ce6", "#0a84ff"]
+# ---------- apple.com palette ----------
+CANVAS = "#f5f5f7"
+TILE = "#ffffff"
+INK = "#1d1d1f"
+GRAY = "#6e6e73"
+GRAY2 = "#86868b"
+HAIR = "#d2d2d7"
+NEW = "#b64400"          # Apple's "New" orange
+BLACK = "#000000"
+INK_DARK = "#f5f5f7"     # text on black
+HAIR_DARK = "#424245"
 
 FONT = ('-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, '
-        'Inter, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif')
+        '&quot;Helvetica Neue&quot;, Helvetica, Inter, &quot;Segoe UI&quot;, Arial, sans-serif')
 
 BASE_CSS = """
 text{font-family:FONT_STACK;}
-.up{animation:up 1.1s cubic-bezier(.16,1,.3,1) both;}
-.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}
-.d4{animation-delay:.38s}.d5{animation-delay:.48s}.d6{animation-delay:.58s}
-@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.drift1{animation:drift1 14s ease-in-out infinite alternate;}
-.drift2{animation:drift2 17s ease-in-out infinite alternate;}
-.drift3{animation:drift3 12s ease-in-out infinite alternate;}
-@keyframes drift1{to{transform:translate(70px,-18px)}}
-@keyframes drift2{to{transform:translate(-80px,10px)}}
-@keyframes drift3{to{transform:translate(40px,14px)}}
-.pulse{animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center;}
-@keyframes pulse{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+.up{animation:up 1.2s cubic-bezier(.25,.1,.25,1) both;}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 """.replace("FONT_STACK", FONT)
 
 
-def t(x, y, s, size, weight=400, fill=TEXT, anchor="start", ls=0, cls="", extra=""):
+def t(x, y, s, size, weight=400, fill=INK, anchor="start", ls=0, cls=""):
     ls_attr = f' letter-spacing="{ls}"' if ls else ""
     cls_attr = f' class="{cls}"' if cls else ""
     return (f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{fill}" '
-            f'text-anchor="{anchor}"{ls_attr}{cls_attr}{extra}>{escape(s)}</text>')
+            f'text-anchor="{anchor}"{ls_attr}{cls_attr}>{escape(s)}</text>')
 
 
-def ai_gradient(gid="ai", x1=180, x2=820, shimmer=True):
-    stops = "".join(f'<stop offset="{i / (len(AI) - 1):.2f}" stop-color="{c}"/>' for i, c in enumerate(AI))
-    anim = ""
-    if shimmer:
-        anim = (f'<animateTransform attributeName="gradientTransform" type="translate" '
-                f'values="0 0;{x2 - x1} 0;0 0" dur="14s" repeatCount="indefinite"/>')
-    return (f'<linearGradient id="{gid}" gradientUnits="userSpaceOnUse" x1="{x1}" y1="0" x2="{x2}" y2="0" '
-            f'spreadMethod="reflect">{stops}{anim}</linearGradient>')
-
-
-def frame(h, body, defs="", css=""):
+def frame(h, body, bg=CANVAS, css="", defs=""):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}" role="img">
-<defs>
-<style>{BASE_CSS}{css}</style>
-<clipPath id="card"><rect x="0" y="0" width="{W}" height="{h}" rx="30"/></clipPath>
-<filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="56"/></filter>
-<filter id="blurS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
-{ai_gradient()}
-{defs}
-</defs>
-<rect x="0" y="0" width="{W}" height="{h}" rx="30" fill="{BG}"/>
-<g clip-path="url(#card)">
+<defs><style>{BASE_CSS}{css}</style>{defs}</defs>
+<rect width="{W}" height="{h}" rx="28" fill="{bg}"/>
 {body}
-</g>
-<rect x=".5" y=".5" width="{W - 1}" height="{h - 1}" rx="29.5" fill="none" stroke="#fff" stroke-opacity=".09"/>
 </svg>'''
 
 
-def glow(cy, spread=1.0, opacity=1.0):
-    """Apple Intelligence style multicolour glow, centred horizontally at height cy."""
-    blobs = [
-        (300, AI[2], 270, .62, "drift1"),
-        (520, AI[1], 280, .50, "drift2"),
-        (730, AI[4], 250, .58, "drift3"),
-        (470, AI[0], 170, .38, "drift1"),
-    ]
-    out = []
-    for cx, col, rx, op, cls in blobs:
-        out.append(f'<ellipse class="{cls}" cx="{cx}" cy="{cy}" rx="{rx * spread:.0f}" ry="{110 * spread:.0f}" '
-                   f'fill="{col}" opacity="{op * opacity:.2f}" filter="url(#blur)"/>')
-    return "\n".join(out)
+def tile(x, y, w, h, fill=TILE, rx=18):
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}"/>'
 
 
-def tile(x, y, w, h, fill=TILE, rx=22):
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}"/>'
-            f'<rect x="{x + .5}" y="{y + .5}" width="{w - 1}" height="{h - 1}" rx="{rx - .5}" fill="none" '
-            f'stroke="#fff" stroke-opacity=".06"/>')
+def hair(x1, y1, x2, y2, col=HAIR):
+    return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{col}" stroke-width="1"/>'
 
 
-def pill(x, y, w, label, h=36, filled=False, size=14):
-    if filled:
-        r = f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}" fill="{TEXT}"/>'
-        col = "#1d1d1f"
-    else:
-        r = (f'<rect x="{x + .5}" y="{y + .5}" width="{w - 1}" height="{h - 1}" rx="{(h - 1) / 2}" '
-             f'fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/>')
-        col = TEXT
-    return r + t(x + w / 2, y + h / 2 + size * .36, label, size, 600, col, "middle")
+def pill(x, y, w, label, h=30, dark=False):
+    stroke = HAIR_DARK if dark else HAIR
+    col = INK_DARK if dark else INK
+    return (f'<rect x="{x + .5}" y="{y + .5}" width="{w - 1}" height="{h - 1}" rx="{(h - 1) / 2}" '
+            f'fill="none" stroke="{stroke}"/>' + t(x + w / 2, y + h / 2 + 4.5, label, 13, 400, col, "middle"))
 
 
-def section_title(title, sub):
-    return (t(PAD, 104, title, 52, 700, TEXT, ls=-1.6, cls="up d1") +
-            t(PAD, 142, sub, 21, 400, TEXT3, cls="up d2"))
+def heading(title, sub, dark=False):
+    return (t(PAD, 106, title, 48, 600, INK_DARK if dark else INK, ls=-1.2, cls="up d1") +
+            t(PAD, 144, sub, 21, 400, GRAY2 if dark else GRAY, ls=-.2, cls="up d2"))
 
 
 # =====================================================================
 # 1. HERO
 # =====================================================================
 def hero():
-    h = 600
-    pills_w = (300, 268)
-    gap = 14
-    x0 = (W - sum(pills_w) - gap) / 2
+    h = 480
     body = f'''
-{glow(650)}
-{t(500, 156, "AI PRODUCT MANAGER", 14, 700, "url(#ai)", "middle", 3.2, "up d1")}
-{t(500, 258, "Lal Aman Singh.", 90, 700, TEXT, "middle", -3, "up d2")}
-{t(500, 322, "Conversations in. Value out.", 34, 600, "url(#ai)", "middle", -.6, "up d3")}
-{t(500, 374, "I design and ship voice AI that speaks India’s languages.", 21, 400, TEXT2, "middle", 0, "up d4")}
-<g class="up d5">
-{pill(x0, 418, pills_w[0], "AI Product Intern at IndusLabs", 46, True, 16)}
-{pill(x0 + pills_w[0] + gap, 418, pills_w[1], "8× National Hackathon Winner", 46, False, 16)}
-</g>
-{t(500, 548, "Noida, India   ·   He/Him", 14, 500, TEXT, "middle", .4, "up d6", ' fill-opacity=".72"')}
+{t(500, 222, "Lal Aman Singh", 92, 600, INK, "middle", -2.6, "up d1")}
+{t(500, 282, "AI Product Intern at IndusLabs.", 28, 400, INK, "middle", -.4, "up d2")}
+{t(500, 326, "Noida, India", 19, 400, GRAY, "middle", -.1, "up d3")}
 '''
     return frame(h, body)
 
 
 # =====================================================================
-# 2. STATS STRIP
+# 2. BY THE NUMBERS
 # =====================================================================
 def stats():
-    h = 236
+    h = 250
     items = [
-        ("8×", "National hackathon", "wins"),
-        ("250+", "Teams in the field at", "Spark Tank, IIFM"),
-        ("2", "Product", "internships"),
-        ("#1", "Rank at Design Spark,", "Intellect Design Arena"),
+        ("8", "National hackathon", "wins."),
+        ("250+", "Teams at Spark Tank.", "We placed second."),
+        ("1st", "National challenge,", "Intellect Design Arena."),
+        ("2", "Product", "internships."),
     ]
     col = W / 4
     parts = []
     for i, (num, l1, l2) in enumerate(items):
         cx = col * i + col / 2
-        d = f"d{i + 1}"
-        parts.append(t(cx, 116, num, 64, 700, "url(#ai)", "middle", -2, f"up {d}"))
-        parts.append(t(cx, 156, l1, 15, 400, TEXT3, "middle", 0, f"up {d}"))
-        parts.append(t(cx, 178, l2, 15, 400, TEXT3, "middle", 0, f"up {d}"))
+        d = f"up d{i + 1}"
+        parts.append(t(cx, 122, num, 64, 600, INK, "middle", -1.8, d))
+        parts.append(t(cx, 164, l1, 15, 400, GRAY, "middle", 0, d))
+        parts.append(t(cx, 186, l2, 15, 400, GRAY, "middle", 0, d))
         if i:
-            parts.append(f'<line x1="{col * i}" y1="62" x2="{col * i}" y2="178" stroke="#fff" stroke-opacity=".1"/>')
+            parts.append(hair(col * i, 72, col * i, 186))
     return frame(h, "\n".join(parts))
 
 
@@ -167,235 +114,195 @@ def stats():
 # 3. EXPERIENCE
 # =====================================================================
 def experience():
-    h = 540
-    y = 180
-    th = 304
-    tw = (W - 2 * PAD - 16) / 2
+    y, th = 184, 290
+    tw = (W - 2 * PAD - 20) / 2
     jobs = [
-        dict(x=PAD, now=True, status="Now", date="Aug 2026 – Present", role="AI Product Intern",
-             company="IndusLabs", desc=["Building voice AI agents that speak", "India’s languages."],
-             foot="On-site  ·  Noida  ·  4 mos"),
-        dict(x=PAD + tw + 16, now=False, status="Completed", date="Feb – Jul 2026", role="Product Manager Intern",
-             company="RYM Grenergy", desc=["A six-month product management", "internship."],
-             foot="Internship  ·  6 mos"),
+        ("Current", NEW, "Aug 2026 – Present", "AI Product Intern", "IndusLabs",
+         ["Shaping voice AI agents that speak", "India’s languages."], "On-site, Noida"),
+        ("Feb – Jul 2026", GRAY, "", "Product Manager Intern", "RYM Grenergy",
+         ["Six months in product management.", ""], "Internship"),
     ]
-    parts = [section_title("Experience.", "Where products meet people.")]
-    for i, j in enumerate(jobs):
-        x = j["x"]
+    parts = [heading("Experience.", "Two internships. One focus: the people who use the product.")]
+    for i, (eb, ebc, date, role, co, desc, foot) in enumerate(jobs):
+        x = PAD + i * (tw + 20)
         ix = x + 36
-        d = f"up d{i + 3}"
-        dot = GREEN if j["now"] else TEXT4
-        pulse = (f'<circle class="pulse" cx="{ix + 6}" cy="{y + 44}" r="5" fill="{GREEN}"/>' if j["now"] else "")
-        parts.append(f'''<g class="{d}">
+        parts.append(f'''<g class="up d{i + 3}">
 {tile(x, y, tw, th)}
-{pulse}<circle cx="{ix + 6}" cy="{y + 44}" r="5" fill="{dot}"/>
-{t(ix + 20, y + 49, j["status"], 14, 600, dot if j["now"] else TEXT3, ls=.3)}
-{t(x + tw - 36, y + 49, j["date"], 14, 500, TEXT3, "end")}
-{t(ix, y + 120, j["role"], 29, 700, TEXT, ls=-.6)}
-{t(ix, y + 156, j["company"], 22, 600, "url(#ai)")}
-{t(ix, y + 206, j["desc"][0], 17, 400, TEXT2)}
-{t(ix, y + 230, j["desc"][1], 17, 400, TEXT2)}
-<line x1="{ix}" y1="{y + 258}" x2="{x + tw - 36}" y2="{y + 258}" stroke="#fff" stroke-opacity=".07"/>
-{t(ix, y + 284, j["foot"], 13, 500, TEXT4, ls=.2)}
+{t(ix, y + 50, eb, 14, 600, ebc)}
+{t(x + tw - 36, y + 50, date, 14, 400, GRAY, "end")}
+{t(ix, y + 116, role, 30, 600, INK, ls=-.7)}
+{t(ix, y + 150, co, 21, 400, INK, ls=-.2)}
+{t(ix, y + 198, desc[0], 17, 400, GRAY)}
+{t(ix, y + 222, desc[1], 17, 400, GRAY)}
+{hair(ix, y + 246, x + tw - 36, y + 246)}
+{t(ix, y + 272, foot, 13, 400, GRAY2)}
 </g>''')
-    return frame(h, "\n".join(parts))
+    return frame(y + th + PAD, "\n".join(parts))
 
 
 # =====================================================================
-# 4. RECOGNITION (bento grid)
+# 4. RECOGNITION
 # =====================================================================
 def recognition():
-    h = 926
-    g = 16
+    g = 20
     inner = W - 2 * PAD
-    parts = [section_title("Recognition.", "8 national hackathon wins, leading product in 24–48 hour sprints.")]
+    parts = [heading("Recognition.", "Eight national wins. Each one built in hours, not months.")]
 
-    # --- big tile: Design Spark
-    bx, by, bw, bh = PAD, 180, 528, 300
+    bx, by, bw, bh = PAD, 184, 520, 320
     parts.append(f'''<g class="up d3">
 {tile(bx, by, bw, bh)}
-<g clip-path="url(#bigclip)"><circle cx="{bx + 150}" cy="{by + 175}" r="120" fill="url(#ai)" opacity=".2" filter="url(#blurS)"/></g>
-{t(bx + 40, by + 50, "NATIONAL CHALLENGE", 13, 600, TEXT3, ls=1.6)}
-{pill(bx + bw - 40 - 200, by + 28, 200, "Cash award + internship", 32, False, 13)}
-{t(bx + 34, by + 166, "1st", 128, 800, "url(#ai)", ls=-5)}
-{t(bx + 40, by + 212, "Design Spark Challenge", 28, 700, TEXT, ls=-.5)}
-{t(bx + 40, by + 242, "Intellect Design Arena, Chennai", 15, 500, TEXT3)}
-{t(bx + 40, by + 270, "Banking-product challenge  ·  Multi-agent AI system", 15, 400, TEXT2)}
+{t(bx + 40, by + 52, "1st Prize", 14, 600, NEW)}
+{t(bx + 34, by + 172, "1st", 120, 600, INK, ls=-4)}
+{t(bx + 40, by + 220, "Design Spark Challenge", 28, 600, INK, ls=-.6)}
+{t(bx + 40, by + 248, "Intellect Design Arena, Chennai", 17, 400, GRAY)}
+{hair(bx + 40, by + 270, bx + bw - 40, by + 270)}
+{t(bx + 40, by + 296, "A national banking-product challenge. Cash award and internship offer.", 13, 400, GRAY2)}
 </g>''')
 
-    # --- two stacked tiles on the right
     rx_, rw, rh = bx + bw + g, inner - bw - g, (bh - g) / 2
-    right = [
-        ("WINNER  ·  OCT 2025", "National Level", "Tech Hackathon", "Kanpur  ·  Team Aspirofy", "1st"),
-        ("WINNER  ·  JUL 2025", "AI Product", "Builder", "Jivika Future Work", "1st"),
-    ]
-    for i, (eb, l1, l2, sub, big) in enumerate(right):
+    right = [("Winner · Oct 2025", "National Level", "Tech Hackathon", "Kanpur"),
+             ("Winner · Jul 2025", "AI Product", "Builder", "Jivika Future Work")]
+    for i, (eb, l1, l2, sub) in enumerate(right):
         ty = by + i * (rh + g)
         parts.append(f'''<g class="up d{4 + i}">
 {tile(rx_, ty, rw, rh)}
-{t(rx_ + 28, ty + 40, eb, 12, 600, TEXT3, ls=1.5)}
-{t(rx_ + 28, ty + 74, l1, 20, 700, TEXT, ls=-.3)}
-{t(rx_ + 28, ty + 98, l2, 20, 700, TEXT, ls=-.3)}
-{t(rx_ + 28, ty + 124, sub, 14, 400, TEXT3)}
-{t(rx_ + rw - 28, ty + 104, big, 54, 800, "url(#ai)", "end", -2)}
+{t(rx_ + 30, ty + 42, eb, 13, 600, GRAY)}
+{t(rx_ + 30, ty + 80, l1, 21, 600, INK, ls=-.3)}
+{t(rx_ + 30, ty + 106, l2, 21, 600, INK, ls=-.3)}
+{t(rx_ + 30, ty + 132, sub, 14, 400, GRAY)}
+{t(rx_ + rw - 30, ty + 108, "1st", 50, 600, INK, "end", -1.5)}
 </g>''')
 
-    # --- row 2: three tiles
-    r2y, r2h = by + bh + g, 230
+    r2y, r2h = by + bh + g, 220
     tw = (inner - 2 * g) / 3
-    row2 = [
-        ("1ST RUNNER-UP  ·  OCT 2025", "#2", "Spark Tank", "of 250+ teams  ·  IIFM Bhopal"),
-        ("2ND RUNNER-UP  ·  NOV 2025", "#3", "Chakravyuh B-Plan", "CVS, Delhi University"),
-        ("24-HOUR BUILD", "24h", "AI HackMatrix", "Chandigarh University"),
-    ]
+    row2 = [("1st Runner-Up · Oct 2025", "2nd", "Spark Tank", "IIFM Bhopal. 250+ teams."),
+            ("2nd Runner-Up · Nov 2025", "3rd", "Chakravyuh B-Plan", "CVS, Delhi University."),
+            ("24-hour build", "24h", "AI HackMatrix", "Chandigarh University.")]
     for i, (eb, big, title, sub) in enumerate(row2):
         tx = PAD + i * (tw + g)
         parts.append(f'''<g class="up d{3 + i}">
 {tile(tx, r2y, tw, r2h)}
-{t(tx + 28, r2y + 44, eb, 12, 600, TEXT3, ls=1.5)}
-{t(tx + 26, r2y + 128, big, 64, 800, "url(#ai)", ls=-2.5)}
-{t(tx + 28, r2y + 172, title, 21, 700, TEXT, ls=-.4)}
-{t(tx + 28, r2y + 198, sub, 14, 400, TEXT3)}
+{t(tx + 30, r2y + 44, eb, 13, 600, GRAY)}
+{t(tx + 28, r2y + 120, big, 56, 600, INK, ls=-1.8)}
+{t(tx + 30, r2y + 164, title, 20, 600, INK, ls=-.3)}
+{t(tx + 30, r2y + 190, sub, 14, 400, GRAY)}
 </g>''')
 
-    # --- row 3: also pitched at
-    r3y, r3h = r2y + r2h + g, 128
+    r3y, r3h = r2y + r2h + g, 124
     parts.append(f'<g class="up d6">{tile(PAD, r3y, inner, r3h)}')
-    parts.append(t(PAD + 40, r3y + 42, "ALSO PITCHED AT", 12, 600, "url(#ai)", ls=1.8))
+    parts.append(t(PAD + 40, r3y + 42, "Also pitched at", 13, 600, GRAY))
     stages = [("IIT Bombay", "National Entrepreneurship Challenge"),
               ("IIM Bangalore", "Pitch Perfect, Season 8"),
               ("BHU, Varanasi", "Bharat Innovation Conclave")]
     cw = (inner - 80) / 3
     for i, (name, det) in enumerate(stages):
         cx = PAD + 40 + i * cw
-        parts.append(t(cx, r3y + 82, name, 20, 700, TEXT, ls=-.3))
-        parts.append(t(cx, r3y + 106, det, 14, 400, TEXT3))
+        parts.append(t(cx, r3y + 80, name, 19, 600, INK, ls=-.3))
+        parts.append(t(cx, r3y + 103, det, 14, 400, GRAY))
         if i:
-            parts.append(f'<line x1="{cx - 24}" y1="{r3y + 64}" x2="{cx - 24}" y2="{r3y + 110}" stroke="#fff" stroke-opacity=".08"/>')
+            parts.append(hair(cx - 24, r3y + 62, cx - 24, r3y + 106))
     parts.append("</g>")
-
-    defs = f'<clipPath id="bigclip"><rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="22"/></clipPath>'
-    return frame(h, "\n".join(parts), defs)
+    return frame(r3y + r3h + PAD, "\n".join(parts))
 
 
 # =====================================================================
-# 5. FEATURED PROJECT: HARDINI
+# 5. HARDINI (black product panel)
 # =====================================================================
 def hardini():
     h = 560
     cx, cy = 760, 280
+    heights = [14, 24, 38, 54, 44, 72, 92, 62, 106, 80, 120, 100, 120, 80, 106, 62, 92, 72, 44, 54, 38, 24, 14]
+    n, sp = len(heights), 11
     bars = []
-    n = 23
-    spacing = 11
-    heights = [18, 30, 46, 64, 52, 84, 104, 72, 118, 92, 130, 112, 130, 92, 118, 72, 104, 84, 52, 64, 46, 30, 18]
-    for i in range(n):
-        x = cx + (i - n // 2) * spacing
-        bh = heights[i]
-        delay = (abs(i - n // 2) * 0.09)
+    for i, bh in enumerate(heights):
+        x = cx + (i - n // 2) * sp
+        delay = abs(i - n // 2) * .09
         bars.append(f'<line class="bar" style="animation-delay:-{delay:.2f}s" x1="{x}" y1="{cy - bh / 2:.1f}" '
-                    f'x2="{x}" y2="{cy + bh / 2:.1f}" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/>')
-    greet = [
-        ("नमस्ते", cx - 150, cy - 140, 0),
-        ("ਸਤ ਸ੍ਰੀ ਅਕਾਲ", cx + 120, cy - 118, 1.5),
-        ("வணக்கம்", cx - 160, cy + 160, 3),
-        ("నమస్కారం", cx + 130, cy + 150, 4.5),
-        ("নমস্কার", cx + 168, cy + 12, 6),
-        ("Hello", cx - 200, cy + 10, 7.5),
-    ]
-    g_parts = "".join(
-        f'<text class="greet" style="animation-delay:{d}s" x="{x}" y="{y}" font-size="17" font-weight="500" '
-        f'fill="{TEXT}" text-anchor="middle">{escape(s)}</text>' for s, x, y, d in greet)
-
-    chips = [("Real-time voice", 148), ("Multilingual", 124), ("Built in 24h", 118)]
-    chip_svg, x = [], PAD + 8
-    for label, w in chips:
-        chip_svg.append(pill(x, 352, w, label, 36, False, 14))
-        x += w + 10
-
+                    f'x2="{x}" y2="{cy + bh / 2:.1f}" stroke="{INK_DARK}" stroke-width="4.5" stroke-linecap="round"/>')
+    greet = [("नमस्ते", cx - 150, cy - 138, 0), ("ਸਤ ਸ੍ਰੀ ਅਕਾਲ", cx + 120, cy - 116, 1.5),
+             ("வணக்கம்", cx - 158, cy + 158, 3), ("నమస్కారం", cx + 128, cy + 148, 4.5),
+             ("নমস্কার", cx + 166, cy + 12, 6), ("Hello", cx - 196, cy + 10, 7.5)]
+    gtxt = "".join(f'<text class="greet" style="animation-delay:{d}s" x="{x}" y="{y}" font-size="16" '
+                   f'font-weight="400" fill="{GRAY2}" text-anchor="middle">{escape(s)}</text>'
+                   for s, x, y, d in greet)
+    rings = "".join(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#fff" stroke-opacity="{o}"/>'
+                    for r, o in [(116, .14), (176, .08), (236, .045)])
+    lx = PAD + 8
     body = f'''
-<circle class="breathe" cx="{cx}" cy="{cy}" r="150" fill="url(#ai)" opacity=".34" filter="url(#blur)"/>
-<circle cx="{cx}" cy="{cy}" r="118" fill="none" stroke="#fff" stroke-opacity=".10"/>
-<circle cx="{cx}" cy="{cy}" r="178" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<circle cx="{cx}" cy="{cy}" r="238" fill="none" stroke="#fff" stroke-opacity=".035"/>
+{rings}
 {"".join(bars)}
-{g_parts}
-{t(PAD + 8, 120, "FEATURED PROJECT", 13, 700, "url(#ai)", ls=2.4, cls="up d1")}
-{t(PAD + 4, 198, "Hardini.", 76, 800, TEXT, ls=-3, cls="up d2")}
-{t(PAD + 8, 246, "Voice AI for every farmer in Bharat.", 24, 600, "#d2d2d7", ls=-.4, cls="up d3")}
-{t(PAD + 8, 294, "Crop diseases, mandi prices, weather and", 17, 400, TEXT3, cls="up d4")}
-{t(PAD + 8, 318, "government schemes, in the farmer’s own language.", 17, 400, TEXT3, cls="up d4")}
-<g class="up d5">{"".join(chip_svg)}</g>
-<g class="up d6">
-<line x1="{PAD + 8}" y1="430" x2="{PAD + 420}" y2="430" stroke="#fff" stroke-opacity=".08"/>
-<circle cx="{PAD + 12}" cy="463" r="4" fill="url(#ai)"/>
-{t(PAD + 26, 468, "1st Runner-Up, Spark Tank, IIFM Bhopal (250+ teams)", 14, 500, TEXT2)}
-<circle cx="{PAD + 12}" cy="491" r="4" fill="url(#ai)"/>
-{t(PAD + 26, 496, "Built in 24 hours at AI HackMatrix, Chandigarh University", 14, 500, TEXT2)}
+{gtxt}
+{t(lx, 124, "Featured project", 14, 600, GRAY2, cls="up d1")}
+{t(lx - 3, 200, "Hardini", 80, 600, INK_DARK, ls=-2.4, cls="up d2")}
+{t(lx, 250, "Ask anything. In your own language.", 26, 400, INK_DARK, ls=-.5, cls="up d3")}
+{t(lx, 298, "A voice AI platform for India’s farmers. Crop", 17, 400, GRAY2, cls="up d4")}
+{t(lx, 322, "diseases, mandi prices, weather and government", 17, 400, GRAY2, cls="up d4")}
+{t(lx, 346, "schemes. Answered instantly, in their native tongue.", 17, 400, GRAY2, cls="up d4")}
+<g class="up d5">
+{hair(lx, 400, lx + 400, 400, HAIR_DARK)}
+{t(lx, 436, "Built in 24 hours at AI HackMatrix, Chandigarh University.", 14, 400, GRAY2)}
+{t(lx, 460, "1st Runner-Up at Spark Tank, IIFM Bhopal. 250+ teams.", 14, 400, GRAY2)}
 </g>
 '''
-    stops = "".join(f'<stop offset="{i / (len(AI) - 1):.2f}" stop-color="{c}"/>' for i, c in enumerate(AI))
-    defs = (f'<linearGradient id="aiV" gradientUnits="userSpaceOnUse" x1="{cx - 130}" y1="0" x2="{cx + 130}" y2="0">'
-            f'{stops}</linearGradient>')
     css = """
-.bar{animation:wave 1.6s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
-@keyframes wave{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
-.breathe{animation:breathe 5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
-@keyframes breathe{0%{transform:scale(.85);opacity:.22}100%{transform:scale(1.1);opacity:.42}}
+.bar{animation:wave 1.8s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
+@keyframes wave{0%{transform:scaleY(.3)}100%{transform:scaleY(1)}}
 .greet{opacity:0;animation:greet 9s ease-in-out infinite;}
-@keyframes greet{0%,100%{opacity:0}12%,40%{opacity:.85}55%{opacity:0}}
+@keyframes greet{0%,100%{opacity:0}12%,40%{opacity:1}55%{opacity:0}}
 """
-    return frame(h, body, defs, css)
+    return frame(h, body, BLACK, css)
 
 
 # =====================================================================
-# 6. HOW I WORK
+# 6. THE PROCESS
 # =====================================================================
-def toolkit():
-    y, th = 180, 352
+def process():
+    y, th = 184, 400
     inner = W - 2 * PAD
-    g = 16
+    g = 20
     tw = (inner - 2 * g) / 3
-    parts = [section_title("How I work.", "From user research to launch, with AI in the loop.")]
-    lists = [
-        ("PRODUCT", ["User research", "Requirements & PRDs", "User stories", "RICE · P0/P1 priorities",
-                     "Roadmaps", "Market research", "Competitive analysis"]),
-        ("DELIVERY", ["Product launch", "Agile · Scrum & Kanban", "Testing, QA & edge cases",
-                      "Iterative development", "Cross-functional work", "Stakeholder updates",
+    parts = [heading("The process.", "Every detail considered. From the first interview to launch day.")]
+    cols = [
+        ("Discover.", ["User research", "Requirements and PRDs", "User stories", "RICE and P0/P1 priorities",
+                       "Roadmaps", "Market research", "Competitive analysis"]),
+        ("Deliver.", ["Product launch", "Agile, Scrum and Kanban", "Testing, QA and edge cases",
+                      "Iterative development", "Cross-functional teams", "Stakeholder communication",
                       "Technical presentations"]),
-        ("AI & TOOLS", ["Voice AI & speech-to-text", "LLM prototyping", "AI/ML product design",
-                        "Python for automation", "SQL (basic)", "Figma flows & wireframes", "Jira · Notion"]),
+        ("Build with AI.", ["Voice AI and speech-to-text", "LLM prototyping", "AI/ML product design",
+                            "Python for automation", "SQL", "Figma flows and wireframes", "Jira and Notion"]),
     ]
-    for i, (eb, items) in enumerate(lists):
+    for i, (title, items) in enumerate(cols):
         x = PAD + i * (tw + g)
+        ix = x + 30
         parts.append(f'<g class="up d{3 + i}">{tile(x, y, tw, th)}')
-        parts.append(t(x + 30, y + 50, eb, 13, 700, "url(#ai)", ls=2.2))
+        parts.append(t(ix, y + 58, title, 24, 600, INK, ls=-.5))
         for k, it in enumerate(items):
-            iy = y + 100 + k * 36
-            parts.append(f'<circle cx="{x + 34}" cy="{iy - 5.5}" r="2.5" fill="url(#ai)"/>')
-            parts.append(t(x + 48, iy, it, 16.5, 500, TEXT, ls=-.2))
+            iy = y + 116 + k * 40
+            parts.append(t(ix, iy, it, 16, 400, INK, ls=-.1))
+            if k < len(items) - 1:
+                parts.append(hair(ix, iy + 16, x + tw - 30, iy + 16))
         parts.append("</g>")
 
-    # bottom row: certification + beyond work
-    by, bh = y + th + g, 172
+    by, bh = y + th + g, 156
     bw = (inner - g) / 2
-    cx = PAD
-    parts.append(f'''<g class="up d5">
-{tile(cx, by, bw, bh)}
-{t(cx + 32, by + 46, "CERTIFIED", 13, 700, "url(#ai)", ls=2.2)}
-{t(cx + 32, by + 86, "Agile Project Management", 23, 700, TEXT, ls=-.5)}
-{t(cx + 32, by + 114, "Professional Certificate  ·  Atlassian", 15, 400, TEXT2)}
-{t(cx + 32, by + 146, "Issued Aug 2026", 13, 500, TEXT4)}
-{pill(cx + bw - 32 - 64 - 8 - 76, by + 124, 76, "Agile", 30, False, 13)}
-{pill(cx + bw - 32 - 64, by + 124, 64, "Jira", 30, False, 13)}
-</g>''')
-    vx = PAD + bw + g
-    parts.append(f'''<g class="up d6">
-{tile(vx, by, bw, bh)}
-{t(vx + 32, by + 46, "BEYOND WORK", 13, 700, "url(#ai)", ls=2.2)}
-{t(vx + 32, by + 86, "Event Coordinator", 23, 700, TEXT, ls=-.5)}
-{t(vx + 32, by + 114, "Lloyd Institute of Engineering and Technology", 15, 400, TEXT2)}
-{t(vx + 32, by + 146, "Dec 2025", 13, 500, TEXT4)}
-</g>''')
+    blocks = [
+        ("Certified", "Agile Project Management", "Professional Certificate, Atlassian. Aug 2026.", ["Agile", "Jira"]),
+        ("Community", "Event Coordinator", "Lloyd Institute of Engineering and Technology. Dec 2025.", []),
+    ]
+    for i, (eb, title, sub, chips) in enumerate(blocks):
+        x = PAD + i * (bw + g)
+        ix = x + 32
+        parts.append(f'<g class="up d{5 + i}">{tile(x, by, bw, bh)}')
+        parts.append(t(ix, by + 46, eb, 13, 600, GRAY))
+        parts.append(t(ix, by + 86, title, 23, 600, INK, ls=-.5))
+        parts.append(t(ix, by + 116, sub, 14, 400, GRAY))
+        cx = x + bw - 32
+        for c in reversed(chips):
+            w = 18 + len(c) * 8
+            cx -= w
+            parts.append(pill(cx, by + 28, w, c))
+            cx -= 8
+        parts.append("</g>")
     return frame(by + bh + PAD, "\n".join(parts))
 
 
@@ -403,24 +310,24 @@ def toolkit():
 # 7. FOOTER
 # =====================================================================
 def footer():
-    h = 420
+    h = 360
     body = f'''
-{glow(-70, .9, .8)}
-{t(500, 178, "Let’s build what’s next.", 58, 700, TEXT, "middle", -2, "up d1")}
-{t(500, 226, "Open to conversations on AI products, voice and Bharat-first tech.", 20, 400, TEXT2, "middle", 0, "up d2")}
-<line class="up d3" x1="420" y1="296" x2="580" y2="296" stroke="url(#ai)" stroke-width="1.5"/>
-{t(500, 344, "Conversations in. Value out.", 16, 600, "url(#ai)", "middle", .2, "up d4")}
-{t(500, 372, "Designed and built by Lal Aman Singh in Noida, India.", 13, 400, TEXT4, "middle", .2, "up d5")}
+{t(500, 160, "Let’s make something great.", 52, 600, INK, "middle", -1.4, "up d1")}
+{t(500, 206, "Open to conversations about AI products, voice and building for India.", 19, 400, GRAY, "middle", -.1, "up d2")}
+{hair(PAD, 276, W - PAD, 276)}
+{t(PAD, 310, "Designed by Lal Aman Singh in Noida.", 12, 400, GRAY2, cls="up d3")}
+{t(W - PAD, 310, "github.com/lalamansingh", 12, 400, GRAY2, "end", cls="up d3")}
 '''
     return frame(h, body)
 
 
-PANELS = {
-    "hero": hero, "stats": stats, "experience": experience, "recognition": recognition,
-    "hardini": hardini, "toolkit": toolkit, "footer": footer,
-}
+PANELS = {"hero": hero, "stats": stats, "experience": experience, "recognition": recognition,
+          "hardini": hardini, "process": process, "footer": footer}
 
 if __name__ == "__main__":
+    for old in OUT.glob("*.svg"):
+        if old.stem not in PANELS:
+            old.unlink()
     for name, fn in PANELS.items():
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
         print("wrote", OUT / f"{name}.svg")

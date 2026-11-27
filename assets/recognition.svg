@@ -1,87 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="926" viewBox="0 0 1000 926" role="img">
-<defs>
-<style>
-text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, Inter, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;}
-.up{animation:up 1.1s cubic-bezier(.16,1,.3,1) both;}
-.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}
-.d4{animation-delay:.38s}.d5{animation-delay:.48s}.d6{animation-delay:.58s}
-@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.drift1{animation:drift1 14s ease-in-out infinite alternate;}
-.drift2{animation:drift2 17s ease-in-out infinite alternate;}
-.drift3{animation:drift3 12s ease-in-out infinite alternate;}
-@keyframes drift1{to{transform:translate(70px,-18px)}}
-@keyframes drift2{to{transform:translate(-80px,10px)}}
-@keyframes drift3{to{transform:translate(40px,14px)}}
-.pulse{animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center;}
-@keyframes pulse{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
-</style>
-<clipPath id="card"><rect x="0" y="0" width="1000" height="926" rx="30"/></clipPath>
-<filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="56"/></filter>
-<filter id="blurS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
-<linearGradient id="ai" gradientUnits="userSpaceOnUse" x1="180" y1="0" x2="820" y2="0" spreadMethod="reflect"><stop offset="0.00" stop-color="#ff9f0a"/><stop offset="0.25" stop-color="#ff375f"/><stop offset="0.50" stop-color="#bf5af2"/><stop offset="0.75" stop-color="#5e5ce6"/><stop offset="1.00" stop-color="#0a84ff"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;640 0;0 0" dur="14s" repeatCount="indefinite"/></linearGradient>
-<clipPath id="bigclip"><rect x="56" y="180" width="528" height="300" rx="22"/></clipPath>
-</defs>
-<rect x="0" y="0" width="1000" height="926" rx="30" fill="#000000"/>
-<g clip-path="url(#card)">
-<text x="56" y="104" font-size="52" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-1.6" class="up d1">Recognition.</text><text x="56" y="142" font-size="21" font-weight="400" fill="#86868b" text-anchor="start" class="up d2">8 national hackathon wins, leading product in 24–48 hour sprints.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="944" viewBox="0 0 1000 944" role="img">
+<defs><style>
+text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, &quot;Helvetica Neue&quot;, Helvetica, Inter, &quot;Segoe UI&quot;, Arial, sans-serif;}
+.up{animation:up 1.2s cubic-bezier(.25,.1,.25,1) both;}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}
+.d4{animation-delay:.35s}.d5{animation-delay:.45s}.d6{animation-delay:.55s}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style></defs>
+<rect width="1000" height="944" rx="28" fill="#f5f5f7"/>
+<text x="56" y="106" font-size="48" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.2" class="up d1">Recognition.</text><text x="56" y="144" font-size="21" font-weight="400" fill="#6e6e73" text-anchor="start" letter-spacing="-0.2" class="up d2">Eight national wins. Each one built in hours, not months.</text>
 <g class="up d3">
-<rect x="56" y="180" width="528" height="300" rx="22" fill="#161617"/><rect x="56.5" y="180.5" width="527" height="299" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<g clip-path="url(#bigclip)"><circle cx="206" cy="355" r="120" fill="url(#ai)" opacity=".2" filter="url(#blurS)"/></g>
-<text x="96" y="230" font-size="13" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.6">NATIONAL CHALLENGE</text>
-<rect x="344.5" y="208.5" width="199" height="31" rx="15.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="444.0" y="228.68" font-size="13" font-weight="600" fill="#f5f5f7" text-anchor="middle">Cash award + internship</text>
-<text x="90" y="346" font-size="128" font-weight="800" fill="url(#ai)" text-anchor="start" letter-spacing="-5">1st</text>
-<text x="96" y="392" font-size="28" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.5">Design Spark Challenge</text>
-<text x="96" y="422" font-size="15" font-weight="500" fill="#86868b" text-anchor="start">Intellect Design Arena, Chennai</text>
-<text x="96" y="450" font-size="15" font-weight="400" fill="#a1a1a6" text-anchor="start">Banking-product challenge  ·  Multi-agent AI system</text>
+<rect x="56" y="184" width="520" height="320" rx="18" fill="#ffffff"/>
+<text x="96" y="236" font-size="14" font-weight="600" fill="#b64400" text-anchor="start">1st Prize</text>
+<text x="90" y="356" font-size="120" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-4">1st</text>
+<text x="96" y="404" font-size="28" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.6">Design Spark Challenge</text>
+<text x="96" y="432" font-size="17" font-weight="400" fill="#6e6e73" text-anchor="start">Intellect Design Arena, Chennai</text>
+<line x1="96" y1="454" x2="536" y2="454" stroke="#d2d2d7" stroke-width="1"/>
+<text x="96" y="480" font-size="13" font-weight="400" fill="#86868b" text-anchor="start">A national banking-product challenge. Cash award and internship offer.</text>
 </g>
 <g class="up d4">
-<rect x="600" y="180.0" width="344" height="142.0" rx="22" fill="#161617"/><rect x="600.5" y="180.5" width="343" height="141.0" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="628" y="220.0" font-size="12" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.5">WINNER  ·  OCT 2025</text>
-<text x="628" y="254.0" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">National Level</text>
-<text x="628" y="278.0" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">Tech Hackathon</text>
-<text x="628" y="304.0" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">Kanpur  ·  Team Aspirofy</text>
-<text x="916" y="284.0" font-size="54" font-weight="800" fill="url(#ai)" text-anchor="end" letter-spacing="-2">1st</text>
+<rect x="596" y="184.0" width="348" height="150.0" rx="18" fill="#ffffff"/>
+<text x="626" y="226.0" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">Winner · Oct 2025</text>
+<text x="626" y="264.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">National Level</text>
+<text x="626" y="290.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">Tech Hackathon</text>
+<text x="626" y="316.0" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Kanpur</text>
+<text x="914" y="292.0" font-size="50" font-weight="600" fill="#1d1d1f" text-anchor="end" letter-spacing="-1.5">1st</text>
 </g>
 <g class="up d5">
-<rect x="600" y="338.0" width="344" height="142.0" rx="22" fill="#161617"/><rect x="600.5" y="338.5" width="343" height="141.0" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="628" y="378.0" font-size="12" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.5">WINNER  ·  JUL 2025</text>
-<text x="628" y="412.0" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">AI Product</text>
-<text x="628" y="436.0" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">Builder</text>
-<text x="628" y="462.0" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">Jivika Future Work</text>
-<text x="916" y="442.0" font-size="54" font-weight="800" fill="url(#ai)" text-anchor="end" letter-spacing="-2">1st</text>
+<rect x="596" y="354.0" width="348" height="150.0" rx="18" fill="#ffffff"/>
+<text x="626" y="396.0" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">Winner · Jul 2025</text>
+<text x="626" y="434.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">AI Product</text>
+<text x="626" y="460.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">Builder</text>
+<text x="626" y="486.0" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Jivika Future Work</text>
+<text x="914" y="462.0" font-size="50" font-weight="600" fill="#1d1d1f" text-anchor="end" letter-spacing="-1.5">1st</text>
 </g>
 <g class="up d3">
-<rect x="56.0" y="496" width="285.3333333333333" height="230" rx="22" fill="#161617"/><rect x="56.5" y="496.5" width="284.3333333333333" height="229" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="84.0" y="540" font-size="12" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.5">1ST RUNNER-UP  ·  OCT 2025</text>
-<text x="82.0" y="624" font-size="64" font-weight="800" fill="url(#ai)" text-anchor="start" letter-spacing="-2.5">#2</text>
-<text x="84.0" y="668" font-size="21" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">Spark Tank</text>
-<text x="84.0" y="694" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">of 250+ teams  ·  IIFM Bhopal</text>
+<rect x="56.0" y="524" width="282.6666666666667" height="220" rx="18" fill="#ffffff"/>
+<text x="86.0" y="568" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">1st Runner-Up · Oct 2025</text>
+<text x="84.0" y="644" font-size="56" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.8">2nd</text>
+<text x="86.0" y="688" font-size="20" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">Spark Tank</text>
+<text x="86.0" y="714" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">IIFM Bhopal. 250+ teams.</text>
 </g>
 <g class="up d4">
-<rect x="357.3333333333333" y="496" width="285.3333333333333" height="230" rx="22" fill="#161617"/><rect x="357.8333333333333" y="496.5" width="284.3333333333333" height="229" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="385.3333333333333" y="540" font-size="12" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.5">2ND RUNNER-UP  ·  NOV 2025</text>
-<text x="383.3333333333333" y="624" font-size="64" font-weight="800" fill="url(#ai)" text-anchor="start" letter-spacing="-2.5">#3</text>
-<text x="385.3333333333333" y="668" font-size="21" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">Chakravyuh B-Plan</text>
-<text x="385.3333333333333" y="694" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">CVS, Delhi University</text>
+<rect x="358.6666666666667" y="524" width="282.6666666666667" height="220" rx="18" fill="#ffffff"/>
+<text x="388.6666666666667" y="568" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">2nd Runner-Up · Nov 2025</text>
+<text x="386.6666666666667" y="644" font-size="56" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.8">3rd</text>
+<text x="388.6666666666667" y="688" font-size="20" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">Chakravyuh B-Plan</text>
+<text x="388.6666666666667" y="714" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">CVS, Delhi University.</text>
 </g>
 <g class="up d5">
-<rect x="658.6666666666666" y="496" width="285.3333333333333" height="230" rx="22" fill="#161617"/><rect x="659.1666666666666" y="496.5" width="284.3333333333333" height="229" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="686.6666666666666" y="540" font-size="12" font-weight="600" fill="#86868b" text-anchor="start" letter-spacing="1.5">24-HOUR BUILD</text>
-<text x="684.6666666666666" y="624" font-size="64" font-weight="800" fill="url(#ai)" text-anchor="start" letter-spacing="-2.5">24h</text>
-<text x="686.6666666666666" y="668" font-size="21" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">AI HackMatrix</text>
-<text x="686.6666666666666" y="694" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">Chandigarh University</text>
+<rect x="661.3333333333334" y="524" width="282.6666666666667" height="220" rx="18" fill="#ffffff"/>
+<text x="691.3333333333334" y="568" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">24-hour build</text>
+<text x="689.3333333333334" y="644" font-size="56" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.8">24h</text>
+<text x="691.3333333333334" y="688" font-size="20" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">AI HackMatrix</text>
+<text x="691.3333333333334" y="714" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Chandigarh University.</text>
 </g>
-<g class="up d6"><rect x="56" y="742" width="888" height="128" rx="22" fill="#161617"/><rect x="56.5" y="742.5" width="887" height="127" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
-<text x="96" y="784" font-size="12" font-weight="600" fill="url(#ai)" text-anchor="start" letter-spacing="1.8">ALSO PITCHED AT</text>
-<text x="96.0" y="824" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">IIT Bombay</text>
-<text x="96.0" y="848" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">National Entrepreneurship Challenge</text>
-<text x="365.3333333333333" y="824" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">IIM Bangalore</text>
-<text x="365.3333333333333" y="848" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">Pitch Perfect, Season 8</text>
-<line x1="341.3333333333333" y1="806" x2="341.3333333333333" y2="852" stroke="#fff" stroke-opacity=".08"/>
-<text x="634.6666666666666" y="824" font-size="20" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.3">BHU, Varanasi</text>
-<text x="634.6666666666666" y="848" font-size="14" font-weight="400" fill="#86868b" text-anchor="start">Bharat Innovation Conclave</text>
-<line x1="610.6666666666666" y1="806" x2="610.6666666666666" y2="852" stroke="#fff" stroke-opacity=".08"/>
+<g class="up d6"><rect x="56" y="764" width="888" height="124" rx="18" fill="#ffffff"/>
+<text x="96" y="806" font-size="13" font-weight="600" fill="#6e6e73" text-anchor="start">Also pitched at</text>
+<text x="96.0" y="844" font-size="19" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">IIT Bombay</text>
+<text x="96.0" y="867" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">National Entrepreneurship Challenge</text>
+<text x="365.3333333333333" y="844" font-size="19" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">IIM Bangalore</text>
+<text x="365.3333333333333" y="867" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Pitch Perfect, Season 8</text>
+<line x1="341.3333333333333" y1="826" x2="341.3333333333333" y2="870" stroke="#d2d2d7" stroke-width="1"/>
+<text x="634.6666666666666" y="844" font-size="19" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.3">BHU, Varanasi</text>
+<text x="634.6666666666666" y="867" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start">Bharat Innovation Conclave</text>
+<line x1="610.6666666666666" y1="826" x2="610.6666666666666" y2="870" stroke="#d2d2d7" stroke-width="1"/>
 </g>
-</g>
-<rect x=".5" y=".5" width="999" height="925" rx="29.5" fill="none" stroke="#fff" stroke-opacity=".09"/>
 </svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" width="100%" alt="Lal Aman Singh. AI Product Manager. Conversations in, value out. AI Product Intern at IndusLabs, 8x national hackathon winner, based in Noida, India." />
+  <img src="assets/hero.svg" width="100%" alt="Lal Aman Singh. AI Product Intern at IndusLabs. Noida, India." />
 </p>
 
 <p align="center">
@@ -19,9 +19,9 @@
 </p>
 
 <p align="center">
-  <img src="assets/toolkit.svg" width="100%" alt="How I work. Product: user research, PRDs, user stories, RICE and P0/P1 prioritization, roadmaps, market research, competitive analysis. Delivery: product launch, Agile, QA, iterative development, stakeholder communication. AI and tools: voice AI, speech-to-text, LLM prototyping, Python, SQL, Figma, Jira, Notion. Atlassian Agile Project Management Professional Certificate. Event Coordinator, Lloyd Institute of Engineering and Technology." />
+  <img src="assets/process.svg" width="100%" alt="The process. Product: user research, PRDs, user stories, RICE and P0/P1 prioritization, roadmaps, market research, competitive analysis. Delivery: product launch, Agile, QA, iterative development, stakeholder communication. AI and tools: voice AI, speech-to-text, LLM prototyping, Python, SQL, Figma, Jira, Notion. Atlassian Agile Project Management Professional Certificate. Event Coordinator, Lloyd Institute of Engineering and Technology." />
 </p>
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="Let's build what's next. Open to conversations on AI products, voice and Bharat-first tech." />
+  <img src="assets/footer.svg" width="100%" alt="Let's make something great. Open to conversations about AI products, voice and building for India." />
 </p>
