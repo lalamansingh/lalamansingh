@@ -10,21 +10,13 @@ text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, 
 <text x="40.0" y="84.0" font-size="50" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.4" class="up d1">Lal Aman Singh</text>
 <text x="40.0" y="116.0" font-size="18" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.2" class="up d2">AI Product Intern at IndusLabs.</text>
 <text x="40.0" y="140.0" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start" class="up d2">Noida, India</text>
-<text x="575.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d2">8</text>
-<text x="575.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">National</text>
-<text x="575.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">hackathon wins</text>
-<text x="685.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d3">250+</text>
-<text x="685.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">Teams at</text>
-<text x="685.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">Spark Tank</text>
-<line x1="630.0" y1="60.0" x2="630.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
-<text x="795.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d4">1st</text>
-<text x="795.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d4">Intellect</text>
-<text x="795.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d4">Design Arena</text>
-<line x1="740.0" y1="60.0" x2="740.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
-<text x="905.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d5">2</text>
-<text x="905.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d5">Product</text>
-<text x="905.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d5">internships</text>
-<line x1="850.0" y1="60.0" x2="850.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
+<text x="735.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d2">8</text>
+<text x="735.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">National</text>
+<text x="735.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">hackathon wins</text>
+<text x="885.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d3">2</text>
+<text x="885.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">Product</text>
+<text x="885.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">internships</text>
+<line x1="810.0" y1="60.0" x2="810.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
 <g class="up d4">
 <rect x="40.0" y="176.0" width="453.0" height="128.0" rx="14" fill="#ffffff"/>
 <text x="64.0" y="208.0" font-size="12" font-weight="600" fill="#b64400" text-anchor="start">Current</text>

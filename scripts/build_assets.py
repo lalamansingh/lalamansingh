@@ -85,9 +85,9 @@ def intro():
         t(PAD, 116, "AI Product Intern at IndusLabs.", 18, 400, INK, ls=-.2, cls="up d2"),
         t(PAD, 140, "Noida, India", 14, 400, GRAY, cls="up d2"),
     ]
-    stats = [("8", "National", "hackathon wins"), ("250+", "Teams at", "Spark Tank"),
-             ("1st", "Intellect", "Design Arena"), ("2", "Product", "internships")]
-    sx, sw = 520, (W - PAD - 520) / 4
+    stats = [("8", "National", "hackathon wins"), ("2", "Product", "internships")]
+    sw = 150
+    sx = W - PAD - sw * len(stats)
     for i, (n, l1, l2) in enumerate(stats):
         cx = sx + i * sw + sw / 2
         parts.append(t(cx, 90, n, 32, 600, INK, "middle", -.8, f"up d{i + 2}"))
@@ -189,24 +189,37 @@ def recognition():
 # =====================================================================
 # 3. PROJECTS (public repositories)
 # =====================================================================
+# (name, tagline, category, live, description, stack tags)
 PROJECTS = [
-    ("FirstRecord", "Policing, in every language.", "TypeScript", True,
-     "Police case and statement records, driven by a Hindi and English voice assistant."),
-    ("Aspirofy Roadmaps", "Learning, mapped.", "TypeScript", True,
-     "Interactive learning roadmaps with built-in progress tracking and analytics."),
-    ("PhishGuard", "Know before you click.", "Python", False,
-     "Machine learning that detects phishing websites and scores their risk."),
-    ("TruthLens", "See what’s real.", "Python", False,
-     "Image and video authenticity checks, deepfake detection and content restoration."),
-    ("Real or Rendered?", "Train your eyes.", "TypeScript", True,
-     "A five-minute daily game. Spot AI-made images, voices and videos, then learn the clues."),
-    ("ORCA", "Oceans, reasoned.", "TypeScript", True,
-     "Marine ecosystem reasoning powered by collaborative AI agents."),
-    ("ATS Resume Scorer", "Get past the filter.", "Python", True,
-     "Scores resumes against a job description, flags mistakes and catches prompt injection."),
-    ("X-Green Tracker", "Bugs, simplified.", "TypeScript", False,
-     "A free, self-hosted Jira alternative for small teams. Built on Next.js and Supabase."),
+    ("FirstRecord", "Policing, in every language.", "Voice AI", True,
+     "Police case and statement records, driven by a Hindi and English voice assistant.",
+     ["Claude Sonnet 5.5", "Whisper", "Next.js"]),
+    ("PhishGuard", "Know before you click.", "Security ML", False,
+     "Four ML classifiers and 50+ live checks score any URL for phishing. ROC-AUC 0.945.",
+     ["Random Forest", "scikit-learn", "FastAPI"]),
+    ("TruthLens", "See what’s real.", "Computer vision", False,
+     "Deepfake and AI-image detection with face forensics and inpainting restoration.",
+     ["SigLIP", "OpenCV YuNet", "PyTorch"]),
+    ("ORCA", "Oceans, reasoned.", "Multi-agent AI", True,
+     "Marine risk intelligence. Planned by AI agents, backed by evidence.",
+     ["LangGraph", "FastAPI", "PostGIS"]),
+    ("ATS Resume Scorer", "Get past the filter.", "NLP", True,
+     "Semantic ATS scoring against a job description, with SQL and prompt-injection detection.",
+     ["Sentence-Transformers", "PyTorch"]),
+    ("X-Green Tracker", "Bugs, simplified.", "Dev tools", False,
+     "A self-hosted Jira alternative with a speech-to-speech AI assistant built in.",
+     ["Gemini Live", "Supabase", "Next.js"]),
+    ("Real or Rendered?", "Train your eyes.", "AI literacy", True,
+     "A five-minute daily game. Spot AI-made images, voices and videos, then learn the clues.",
+     ["Next.js 15", "Drizzle", "Postgres"]),
+    ("Aspirofy Roadmaps", "Learning, mapped.", "EdTech", True,
+     "Interactive learning roadmaps with built-in progress tracking and analytics.",
+     ["React 19", "Zustand", "Recharts"]),
 ]
+
+
+def tag_w(label):
+    return 14 + len(label) * 5.9
 
 
 def wrap(s, n):
@@ -222,23 +235,42 @@ def wrap(s, n):
 
 def projects():
     parts = [heading("Projects.", "Eight ideas, taken all the way to working code.")]
-    cols, th = 4, 172
+    cols = 4
     tw = (INNER - (cols - 1) * GAP) / cols
-    for i, (name, tag, lang, live, desc) in enumerate(PROJECTS):
+
+    def tag_rows(tags):
+        n, cx = 1, 0
+        for tg in tags:
+            w = tag_w(tg)
+            if cx and cx + w > tw - 40:
+                n, cx = n + 1, 0
+            cx += w + 6
+        return n
+
+    th = 164 + max(tag_rows(p[5]) for p in PROJECTS) * 26 + 6
+    for i, (name, tag, cat, live, desc, stack) in enumerate(PROJECTS):
         x = PAD + (i % cols) * (tw + GAP)
         y = HEAD_H + (i // cols) * (th + GAP)
         ix = x + 20
-        lines = wrap(desc, 33)
+        lines = wrap(desc, 31)
         assert len(lines) <= 3, name
         parts.append(f'<g class="up d{3 + i % cols}">{tile(x, y, tw, th)}')
-        parts.append(t(ix, y + 30, lang, 11, 600, GRAY))
+        parts.append(t(ix, y + 30, cat, 11, 600, GRAY))
         if live:
             parts.append(t(x + tw - 20, y + 30, "Live", 11, 600, NEW, "end"))
-        parts.append(t(ix, y + 60, name, 17, 600, INK, ls=-.3))
-        parts.append(t(ix, y + 80, tag, 13, 400, INK))
-        parts.append(hair(ix, y + 94, x + tw - 20, y + 94))
+        parts.append(t(ix, y + 58, name, 17, 600, INK, ls=-.3))
+        parts.append(t(ix, y + 78, tag, 13, 400, INK))
+        parts.append(hair(ix, y + 92, x + tw - 20, y + 92))
         for k, ln in enumerate(lines):
-            parts.append(t(ix, y + 116 + k * 17, ln, 12, 400, GRAY))
+            parts.append(t(ix, y + 113 + k * 17, ln, 12, 400, GRAY))
+        cx, cy = ix, y + 164
+        for tg in stack:
+            w = tag_w(tg)
+            if cx > ix and cx + w > x + tw - 20:
+                cx, cy = ix, cy + 26
+            parts.append(f'<rect x="{cx:.1f}" y="{cy}" width="{w:.1f}" height="20" rx="10" fill="{CANVAS}"/>')
+            parts.append(t(cx + w / 2, cy + 14, tg, 11, 500, INK, "middle"))
+            cx += w + 6
         parts.append("</g>")
     end = HEAD_H + 2 * th + GAP
     parts.append(t(W / 2, end + 36, "Every project is open source. Explore them in the repositories below.",

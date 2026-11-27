@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/intro.svg" width="100%" alt="Lal Aman Singh. AI Product Intern at IndusLabs. Noida, India. 8 national hackathon wins, 250+ teams at Spark Tank, 1st at Intellect Design Arena, 2 product internships. Current: AI Product Intern, IndusLabs (Aug 2026 – Present). Previous: Product Manager Intern, RYM Grenergy (Feb – Jul 2026)." />
+  <img src="assets/intro.svg" width="100%" alt="Lal Aman Singh. AI Product Intern at IndusLabs. Noida, India. 8 national hackathon wins, 2 product internships. Current: AI Product Intern, IndusLabs (Aug 2026 – Present). Previous: Product Manager Intern, RYM Grenergy (Feb – Jul 2026)." />
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/projects.svg" width="100%" alt="Projects: FirstRecord (police case management with a Hindi/English voice assistant), Aspirofy Roadmaps (interactive learning roadmaps), PhishGuard (ML phishing detection), TruthLens (deepfake detection), Real or Rendered? (daily deepfake-spotting game), ORCA (marine ecosystem reasoning with AI agents), ATS Resume Scorer, X-Green Tracker (self-hosted bug tracker)." />
+  <img src="assets/projects.svg" width="100%" alt="Projects: FirstRecord (Claude Sonnet 5.5, Whisper), PhishGuard (Random Forest, scikit-learn), TruthLens (SigLIP, OpenCV YuNet, PyTorch), ORCA (LangGraph agents), ATS Resume Scorer (Sentence-Transformers), X-Green Tracker (Gemini Live, Supabase), Real or Rendered? (Next.js), Aspirofy Roadmaps (React)." />
 </p>
 
 <p align="center">
