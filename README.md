@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <img src="assets/recognition.svg" width="100%" alt="Recognition: 1st, Design Spark Challenge at Intellect Design Arena, Chennai (national banking-product challenge, cash award and internship offer). 1st, National Level Tech Hackathon, Kanpur (Oct 2025). 1st, AI Product Builder, Jivika Future Work (Jul 2025). 1st Runner-Up, Spark Tank, IIFM Bhopal, 250+ teams (Oct 2025). 2nd Runner-Up, Chakravyuh B-Plan, CVS Delhi University (Nov 2025). AI HackMatrix, Chandigarh University. Also pitched at IIT Bombay, IIM Bangalore and BHU." />
+  <img src="assets/recognition.svg" width="100%" alt="Recognition: 1st, Design Spark Challenge, Intellect Design Arena. 1st, National Level Tech Hackathon, Kanpur. 1st, AI Product Builder, Jivika Future Work. 2nd, Spark Tank, IIFM Bhopal (250+ teams). 3rd, Chakravyuh B-Plan, CVS Delhi University. AI HackMatrix, Chandigarh University. Also pitched at IIT Bombay, IIM Bangalore and BHU." />
 </p>
 
 <p align="center">
-  <img src="assets/hardini.svg" width="100%" alt="Featured project: Hardini. Ask anything, in your own language. A voice AI platform for India's farmers: crop diseases, mandi prices, weather and government schemes. Built in 24 hours at AI HackMatrix; 1st Runner-Up at Spark Tank, IIFM Bhopal." />
+  <img src="assets/projects.svg" width="100%" alt="Projects: FirstRecord (police case management with a Hindi/English voice assistant), Aspirofy Roadmaps (interactive learning roadmaps), PhishGuard (ML phishing detection), TruthLens (deepfake detection), Real or Rendered? (daily deepfake-spotting game), ORCA (marine ecosystem reasoning with AI agents), ATS Resume Scorer, X-Green Tracker (self-hosted bug tracker)." />
 </p>
 
 <p align="center">

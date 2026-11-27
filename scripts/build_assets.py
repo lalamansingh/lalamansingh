@@ -118,100 +118,96 @@ def intro():
 
 
 # =====================================================================
-# 2. RECOGNITION
+# 2. RECOGNITION (compact)
 # =====================================================================
+WINS = [
+    ("1st", "Design Spark Challenge", "Intellect Design Arena, Chennai."),
+    ("1st", "National Level Tech Hackathon", "Kanpur. Oct 2025."),
+    ("1st", "AI Product Builder", "Jivika Future Work. Jul 2025."),
+    ("2nd", "Spark Tank, IIFM Bhopal", "Runner-up of 250+ teams. Oct 2025."),
+    ("3rd", "Chakravyuh B-Plan", "CVS, Delhi University. Nov 2025."),
+    ("24h", "AI HackMatrix", "Chandigarh University."),
+]
+
+
 def recognition():
     parts = [heading("Recognition.", "Eight national wins. Each one built in hours, not months.")]
-    y = HEAD_H
-    bw, bh = 440, 222
-    parts.append(f'''<g class="up d3">
-{tile(PAD, y, bw, bh)}
-{t(PAD + 26, y + 34, "1st Prize", 12, 600, NEW)}
-{t(PAD + 22, y + 108, "1st", 72, 600, INK, ls=-2.4)}
-{t(PAD + 26, y + 146, "Design Spark Challenge", 21, 600, INK, ls=-.4)}
-{t(PAD + 26, y + 168, "Intellect Design Arena, Chennai", 13, 400, GRAY)}
-{hair(PAD + 26, y + 182, PAD + bw - 26, y + 182)}
-{t(PAD + 26, y + 202, "A national banking-product challenge. Cash award and internship offer.", 12, 400, GRAY2)}
+    cols, th = 3, 62
+    tw = (INNER - (cols - 1) * GAP) / cols
+    for i, (rank, title, sub) in enumerate(WINS):
+        x = PAD + (i % cols) * (tw + GAP)
+        y = HEAD_H + (i // cols) * (th + GAP)
+        parts.append(f'''<g class="up d{3 + i % cols}">
+{tile(x, y, tw, th)}
+{t(x + 20, y + 40, rank, 24, 600, NEW if i == 0 else INK, ls=-.6)}
+{hair(x + 72, y + 16, x + 72, y + th - 16)}
+{t(x + 88, y + 28, title, 14, 600, INK, ls=-.2)}
+{t(x + 88, y + 46, sub, 11.5, 400, GRAY)}
 </g>''')
-
-    def small(x, ty, w, h, eb, title, sub, big, d):
-        return f'''<g class="up d{d}">
-{tile(x, ty, w, h)}
-{t(x + 22, ty + 30, eb, 11, 600, GRAY)}
-{t(x + 22, ty + 58, title, 16, 600, INK, ls=-.2)}
-{t(x + 22, ty + 78, sub, 12, 400, GRAY)}
-{t(x + w - 22, ty + 66, big, 30, 600, INK, "end", -.8)}
-</g>'''
-
-    rx_, rw, rh = PAD + bw + GAP, INNER - bw - GAP, (bh - GAP) / 2
-    parts.append(small(rx_, y, rw, rh, "Winner · Oct 2025", "National Level Tech Hackathon", "Kanpur", "1st", 4))
-    parts.append(small(rx_, y + rh + GAP, rw, rh, "Winner · Jul 2025", "AI Product Builder", "Jivika Future Work", "1st", 5))
-
-    y2, h2 = y + bh + GAP, 104
-    tw = (INNER - 2 * GAP) / 3
-    row = [("1st Runner-Up · Oct 2025", "Spark Tank", "IIFM Bhopal. 250+ teams.", "2nd"),
-           ("2nd Runner-Up · Nov 2025", "Chakravyuh B-Plan", "CVS, Delhi University.", "3rd"),
-           ("24-hour build", "AI HackMatrix", "Chandigarh University.", "24h")]
-    for i, (eb, title, sub, big) in enumerate(row):
-        parts.append(small(PAD + i * (tw + GAP), y2, tw, h2, eb, title, sub, big, 4 + i))
-
-    y3, h3 = y2 + h2 + GAP, 84
-    parts.append(f'<g class="up d6">{tile(PAD, y3, INNER, h3)}')
-    parts.append(t(PAD + 22, y3 + 30, "Also pitched at", 11, 600, GRAY))
-    stages = [("IIT Bombay", "National Entrepreneurship Challenge"),
-              ("IIM Bangalore", "Pitch Perfect, Season 8"),
-              ("BHU, Varanasi", "Bharat Innovation Conclave")]
-    cw = (INNER - 44) / 3
-    for i, (name, det) in enumerate(stages):
-        cx = PAD + 22 + i * cw
-        parts.append(t(cx, y3 + 54, name, 15, 600, INK, ls=-.2))
-        parts.append(t(cx, y3 + 72, det, 12, 400, GRAY))
-        if i:
-            parts.append(hair(cx - 18, y3 + 42, cx - 18, y3 + 74))
-    parts.append("</g>")
-    return frame(y3 + h3 + PAD, "\n".join(parts))
+    end = HEAD_H + 2 * th + GAP
+    parts.append(t(PAD, end + 34, "Also pitched at IIT Bombay, National Entrepreneurship Challenge  ·  "
+                   "IIM Bangalore, Pitch Perfect S8  ·  BHU, Bharat Innovation Conclave", 12, 400, GRAY, cls="up d6"))
+    return frame(end + 58, "\n".join(parts))
 
 
 # =====================================================================
-# 3. HARDINI (black product panel)
+# 3. PROJECTS (public repositories)
 # =====================================================================
-def hardini():
-    h = 300
-    cx, cy = 770, 150
-    heights = [8, 13, 21, 30, 24, 40, 51, 34, 58, 44, 66, 55, 66, 44, 58, 34, 51, 40, 24, 30, 21, 13, 8]
-    n, sp = len(heights), 7
-    bars = "".join(
-        f'<line class="bar" style="animation-delay:-{abs(i - n // 2) * .09:.2f}s" x1="{cx + (i - n // 2) * sp}" '
-        f'y1="{cy - bh / 2:.1f}" x2="{cx + (i - n // 2) * sp}" y2="{cy + bh / 2:.1f}" stroke="{INK_DARK}" '
-        f'stroke-width="3" stroke-linecap="round"/>' for i, bh in enumerate(heights))
-    rings = "".join(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#fff" stroke-opacity="{o}"/>'
-                    for r, o in [(70, .14), (104, .08), (138, .045)])
-    greet = [("नमस्ते", cx - 92, cy - 82, 0), ("ਸਤ ਸ੍ਰੀ ਅਕਾਲ", cx + 78, cy - 72, 1.5),
-             ("வணக்கம்", cx - 96, cy + 98, 3), ("నమస్కారం", cx + 82, cy + 92, 4.5),
-             ("নমস্কার", cx + 104, cy + 5, 6), ("Hello", cx - 118, cy + 5, 7.5)]
-    gtxt = "".join(f'<text class="greet" style="animation-delay:{d}s" x="{x}" y="{y}" font-size="12" '
-                   f'fill="{GRAY2}" text-anchor="middle">{escape(s)}</text>' for s, x, y, d in greet)
-    lx = PAD + 4
-    body = f'''
-{rings}{bars}{gtxt}
-{t(lx, 62, "Featured project", 12, 600, GRAY2, cls="up d1")}
-{t(lx - 2, 114, "Hardini", 50, 600, INK_DARK, ls=-1.4, cls="up d2")}
-{t(lx, 146, "Ask anything. In your own language.", 19, 400, INK_DARK, ls=-.3, cls="up d3")}
-{t(lx, 176, "A voice AI platform for India’s farmers. Crop diseases, mandi", 13, 400, GRAY2, cls="up d4")}
-{t(lx, 195, "prices, weather and government schemes, in their native tongue.", 13, 400, GRAY2, cls="up d4")}
-<g class="up d5">
-{hair(lx, 218, lx + 400, 218, HAIR_DARK)}
-{t(lx, 242, "Built in 24 hours at AI HackMatrix, Chandigarh University.", 12, 400, GRAY2)}
-{t(lx, 260, "1st Runner-Up at Spark Tank, IIFM Bhopal. 250+ teams.", 12, 400, GRAY2)}
-</g>
-'''
-    css = """
-.bar{animation:wave 1.8s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
-@keyframes wave{0%{transform:scaleY(.3)}100%{transform:scaleY(1)}}
-.greet{opacity:0;animation:greet 9s ease-in-out infinite;}
-@keyframes greet{0%,100%{opacity:0}12%,40%{opacity:1}55%{opacity:0}}
-"""
-    return frame(h, body, BLACK, css)
+PROJECTS = [
+    ("FirstRecord", "Policing, in every language.", "TypeScript", True,
+     "Police case and statement records, driven by a Hindi and English voice assistant."),
+    ("Aspirofy Roadmaps", "Learning, mapped.", "TypeScript", True,
+     "Interactive learning roadmaps with built-in progress tracking and analytics."),
+    ("PhishGuard", "Know before you click.", "Python", False,
+     "Machine learning that detects phishing websites and scores their risk."),
+    ("TruthLens", "See what’s real.", "Python", False,
+     "Image and video authenticity checks, deepfake detection and content restoration."),
+    ("Real or Rendered?", "Train your eyes.", "TypeScript", True,
+     "A five-minute daily game. Spot AI-made images, voices and videos, then learn the clues."),
+    ("ORCA", "Oceans, reasoned.", "TypeScript", True,
+     "Marine ecosystem reasoning powered by collaborative AI agents."),
+    ("ATS Resume Scorer", "Get past the filter.", "Python", True,
+     "Scores resumes against a job description, flags mistakes and catches prompt injection."),
+    ("X-Green Tracker", "Bugs, simplified.", "TypeScript", False,
+     "A free, self-hosted Jira alternative for small teams. Built on Next.js and Supabase."),
+]
+
+
+def wrap(s, n):
+    lines, cur = [], ""
+    for w in s.split():
+        if cur and len(cur) + 1 + len(w) > n:
+            lines.append(cur)
+            cur = w
+        else:
+            cur = f"{cur} {w}".strip()
+    return lines + [cur]
+
+
+def projects():
+    parts = [heading("Projects.", "Eight ideas, taken all the way to working code.")]
+    cols, th = 4, 172
+    tw = (INNER - (cols - 1) * GAP) / cols
+    for i, (name, tag, lang, live, desc) in enumerate(PROJECTS):
+        x = PAD + (i % cols) * (tw + GAP)
+        y = HEAD_H + (i // cols) * (th + GAP)
+        ix = x + 20
+        lines = wrap(desc, 33)
+        assert len(lines) <= 3, name
+        parts.append(f'<g class="up d{3 + i % cols}">{tile(x, y, tw, th)}')
+        parts.append(t(ix, y + 30, lang, 11, 600, GRAY))
+        if live:
+            parts.append(t(x + tw - 20, y + 30, "Live", 11, 600, NEW, "end"))
+        parts.append(t(ix, y + 60, name, 17, 600, INK, ls=-.3))
+        parts.append(t(ix, y + 80, tag, 13, 400, INK))
+        parts.append(hair(ix, y + 94, x + tw - 20, y + 94))
+        for k, ln in enumerate(lines):
+            parts.append(t(ix, y + 116 + k * 17, ln, 12, 400, GRAY))
+        parts.append("</g>")
+    end = HEAD_H + 2 * th + GAP
+    parts.append(t(W / 2, end + 36, "Every project is open source. Explore them in the repositories below.",
+                   12, 400, GRAY2, "middle", 0, "up d6"))
+    return frame(end + 60, "\n".join(parts))
 
 
 # =====================================================================
@@ -272,7 +268,7 @@ def process():
     return frame(fy + 96, "\n".join(parts))
 
 
-PANELS = {"intro": intro, "recognition": recognition, "hardini": hardini, "process": process}
+PANELS = {"intro": intro, "recognition": recognition, "projects": projects, "process": process}
 
 if __name__ == "__main__":
     for old in OUT.glob("*.svg"):
