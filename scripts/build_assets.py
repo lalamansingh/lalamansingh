@@ -211,64 +211,108 @@ def projects():
 
 
 # =====================================================================
-# 4. THE PROCESS + footer
+# 4. THE PROCESS (black panel, Apple Pro style)
 # =====================================================================
+TILE_DARK = "#1d1d1f"
+
+STEPS = [
+    ("Discover.", "Understand people first.",
+     ["User research", "Requirements", "PRDs", "User stories", "RICE", "P0/P1 priorities", "Roadmaps",
+      "Market research", "Competitive analysis"]),
+    ("Deliver.", "Ship it. Then make it better.",
+     ["Product launch", "Scrum", "Kanban", "QA", "Edge cases", "Iteration", "Cross-functional teams",
+      "Stakeholders", "Tech presentations"]),
+    ("Build with AI.", "Prototype at the speed of thought.",
+     ["Voice AI", "Speech-to-text", "LLM prototyping", "AI/ML products", "Python", "SQL", "Figma", "Jira",
+      "Notion"]),
+]
+
+
+def dark_pill(x, y, label, h=24):
+    w = 20 + len(label) * 6.4
+    return w, (f'<rect x="{x + .5:.1f}" y="{y + .5:.1f}" width="{w - 1:.1f}" height="{h - 1}" rx="{(h - 1) / 2}" '
+               f'fill="#fff" fill-opacity=".04" stroke="{HAIR_DARK}"/>' +
+               t(x + w / 2, y + h / 2 + 4, label, 12, 400, INK_DARK, "middle"))
+
+
 def process():
-    parts = [heading("The process.", "Every detail considered. From the first interview to launch day.")]
-    y, th = HEAD_H, 232
+    parts = [t(PAD, 62, "The process.", 30, 600, INK_DARK, ls=-.7, cls="up d1"),
+             t(PAD, 88, "Every detail considered. From the first interview to launch day.", 15, 400, GRAY2,
+               cls="up d2")]
     tw = (INNER - 2 * GAP) / 3
-    cols = [
-        ("Discover.", ["User research", "Requirements and PRDs", "User stories", "RICE and P0/P1 priorities",
-                       "Roadmaps", "Market research", "Competitive analysis"]),
-        ("Deliver.", ["Product launch", "Agile, Scrum and Kanban", "Testing, QA and edge cases",
-                      "Iterative development", "Cross-functional teams", "Stakeholder communication",
-                      "Technical presentations"]),
-        ("Build with AI.", ["Voice AI and speech-to-text", "LLM prototyping", "AI/ML product design",
-                            "Python for automation", "SQL", "Figma flows and wireframes", "Jira and Notion"]),
-    ]
-    for i, (title, items) in enumerate(cols):
+    ly = 128
+    # timeline that draws itself, with numbered nodes
+    parts.append(f'<line class="draw" x1="{PAD + 34}" y1="{ly}" x2="{PAD + 2 * (tw + GAP) + 34}" y2="{ly}" '
+                 f'stroke="{HAIR_DARK}" stroke-width="1"/>')
+    y = 158
+
+    def rows(chips):
+        n, cx = 1, 0
+        for c in chips:
+            w = 20 + len(c) * 6.4
+            if cx and cx + w > tw - 44:
+                n, cx = n + 1, 0
+            cx += w + 8
+        return n
+
+    th = 116 + max(rows(c) for _, _, c in STEPS) * 32 + 14
+    for i, (title, line, chips) in enumerate(STEPS):
         x = PAD + i * (tw + GAP)
         ix = x + 22
-        parts.append(f'<g class="up d{3 + i}">{tile(x, y, tw, th)}')
-        parts.append(t(ix, y + 36, title, 17, 600, INK, ls=-.3))
-        for k, it in enumerate(items):
-            iy = y + 70 + k * 25
-            parts.append(t(ix, iy, it, 13, 400, INK))
-            if k < len(items) - 1:
-                parts.append(hair(ix, iy + 9, x + tw - 22, iy + 9))
+        parts.append(f'<g class="up d{3 + i}">')
+        parts.append(f'<circle cx="{x + 34}" cy="{ly}" r="12" fill="{BLACK}" stroke="{GRAY}"/>')
+        parts.append(t(x + 34, ly + 4, str(i + 1), 11, 600, INK_DARK, "middle"))
+        parts.append(tile(x, y, tw, th, TILE_DARK))
+        parts.append(t(ix, y + 30, f"Step {i + 1:02d}", 11, 600, GRAY2))
+        parts.append(t(ix, y + 62, title, 22, 600, INK_DARK, ls=-.4))
+        parts.append(t(ix, y + 84, line, 13, 400, GRAY2))
+        parts.append(hair(ix, y + 100, x + tw - 22, y + 100, HAIR_DARK))
+        cx, cy = ix, y + 116
+        for c in chips:
+            w = 20 + len(c) * 6.4
+            if cx + w > x + tw - 22:
+                cx, cy = ix, cy + 32
+            _, svg = dark_pill(cx, cy, c)
+            parts.append(svg)
+            cx += w + 8
         parts.append("</g>")
 
     by, bh = y + th + GAP, 82
     bw = (INNER - GAP) / 2
-    blocks = [("Certified", "Agile Project Management", "Professional Certificate, Atlassian. Aug 2026.", ["Agile", "Jira"]),
-              ("Community", "Event Coordinator", "Lloyd Institute of Engineering and Technology. Dec 2025.", [])]
-    for i, (eb, title, sub, chips) in enumerate(blocks):
+    blocks = [("Certified", "Agile Project Management", "Professional Certificate, Atlassian. Aug 2026."),
+              ("Community", "Event Coordinator", "Lloyd Institute of Engineering and Technology. Dec 2025.")]
+    for i, (eb, title, sub) in enumerate(blocks):
         x = PAD + i * (bw + GAP)
         ix = x + 22
-        parts.append(f'<g class="up d{5 + i}">{tile(x, by, bw, bh)}')
-        parts.append(t(ix, by + 28, eb, 11, 600, GRAY))
-        parts.append(t(ix, by + 51, title, 16, 600, INK, ls=-.2))
-        parts.append(t(ix, by + 69, sub, 12, 400, GRAY))
-        cx = x + bw - 22
-        for c in reversed(chips):
-            w = 16 + len(c) * 7
-            cx -= w
-            parts.append(pill(cx, by + 14, w, c))
-            cx -= 6
+        parts.append(f'<g class="up d{5 + i}">{tile(x, by, bw, bh, TILE_DARK)}')
+        parts.append(t(ix, by + 28, eb, 11, 600, GRAY2))
+        parts.append(t(ix, by + 51, title, 16, 600, INK_DARK, ls=-.2))
+        parts.append(t(ix, by + 69, sub, 12, 400, GRAY2))
         parts.append("</g>")
-
-    # footer
-    fy = by + bh + 56
-    parts.append(t(W / 2, fy, "Let’s make something great.", 28, 600, INK, "middle", -.6, "up d6"))
-    parts.append(t(W / 2, fy + 26, "Open to conversations about AI products, voice and building for India.",
-                   14, 400, GRAY, "middle", 0, "up d6"))
-    parts.append(hair(PAD, fy + 52, W - PAD, fy + 52))
-    parts.append(t(PAD, fy + 74, "Designed by Lal Aman Singh in Noida.", 11, 400, GRAY2))
-    parts.append(t(W - PAD, fy + 74, "github.com/lalamansingh", 11, 400, GRAY2, "end"))
-    return frame(fy + 96, "\n".join(parts))
+    css = """
+.draw{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.6s cubic-bezier(.25,.1,.25,1) .2s forwards;}
+@keyframes draw{to{stroke-dashoffset:0}}
+"""
+    return frame(by + bh + PAD, "\n".join(parts), BLACK, css)
 
 
-PANELS = {"intro": intro, "recognition": recognition, "projects": projects, "process": process}
+# =====================================================================
+# 5. FOOTER
+# =====================================================================
+def footer():
+    h = 168
+    body = f'''
+{t(W / 2, 64, "Let’s make something great.", 28, 600, INK, "middle", -.6, "up d1")}
+{t(W / 2, 90, "Open to conversations about AI products, voice and building for India.", 14, 400, GRAY, "middle", 0, "up d2")}
+{hair(PAD, 118, W - PAD, 118)}
+{t(PAD, 142, "Designed by Lal Aman Singh in Noida.", 11, 400, GRAY2)}
+{t(W - PAD, 142, "github.com/lalamansingh", 11, 400, GRAY2, "end")}
+'''
+    return frame(h, body)
+
+
+PANELS = {"intro": intro, "recognition": recognition, "projects": projects, "process": process,
+          "footer": footer}
 
 if __name__ == "__main__":
     for old in OUT.glob("*.svg"):
