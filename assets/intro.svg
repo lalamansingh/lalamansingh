@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="344" viewBox="0 0 1000 344" role="img">
+<defs><style>
+text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, &quot;Helvetica Neue&quot;, Helvetica, Inter, &quot;Segoe UI&quot;, Arial, sans-serif;}
+.up{animation:up 1s cubic-bezier(.25,.1,.25,1) both;}
+.d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.19s}
+.d4{animation-delay:.26s}.d5{animation-delay:.33s}.d6{animation-delay:.4s}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style></defs>
+<rect width="1000" height="344" rx="22" fill="#f5f5f7"/>
+<text x="40.0" y="84.0" font-size="50" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-1.4" class="up d1">Lal Aman Singh</text>
+<text x="40.0" y="116.0" font-size="18" font-weight="400" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.2" class="up d2">AI Product Intern at IndusLabs.</text>
+<text x="40.0" y="140.0" font-size="14" font-weight="400" fill="#6e6e73" text-anchor="start" class="up d2">Noida, India</text>
+<text x="575.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d2">8</text>
+<text x="575.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">National</text>
+<text x="575.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d2">hackathon wins</text>
+<text x="685.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d3">250+</text>
+<text x="685.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">Teams at</text>
+<text x="685.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d3">Spark Tank</text>
+<line x1="630.0" y1="60.0" x2="630.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
+<text x="795.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d4">1st</text>
+<text x="795.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d4">Intellect</text>
+<text x="795.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d4">Design Arena</text>
+<line x1="740.0" y1="60.0" x2="740.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
+<text x="905.0" y="90.0" font-size="32" font-weight="600" fill="#1d1d1f" text-anchor="middle" letter-spacing="-0.8" class="up d5">2</text>
+<text x="905.0" y="114.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d5">Product</text>
+<text x="905.0" y="130.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="middle" class="up d5">internships</text>
+<line x1="850.0" y1="60.0" x2="850.0" y2="132.0" stroke="#d2d2d7" stroke-width="1"/>
+<g class="up d4">
+<rect x="40.0" y="176.0" width="453.0" height="128.0" rx="14" fill="#ffffff"/>
+<text x="64.0" y="208.0" font-size="12" font-weight="600" fill="#b64400" text-anchor="start">Current</text>
+<text x="469.0" y="208.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="end">Aug 2026 – Present · On-site, Noida</text>
+<text x="64.0" y="242.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.4">AI Product Intern</text>
+<text x="64.0" y="264.0" font-size="14" font-weight="400" fill="#1d1d1f" text-anchor="start">IndusLabs</text>
+<line x1="64.0" y1="276.0" x2="469.0" y2="276.0" stroke="#d2d2d7" stroke-width="1"/>
+<text x="64.0" y="294.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="start">Shaping voice AI agents that speak India’s languages.</text>
+</g>
+<g class="up d5">
+<rect x="507.0" y="176.0" width="453.0" height="128.0" rx="14" fill="#ffffff"/>
+<text x="531.0" y="208.0" font-size="12" font-weight="600" fill="#6e6e73" text-anchor="start">Previous</text>
+<text x="936.0" y="208.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="end">Feb – Jul 2026 · 6 mos</text>
+<text x="531.0" y="242.0" font-size="21" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.4">Product Manager Intern</text>
+<text x="531.0" y="264.0" font-size="14" font-weight="400" fill="#1d1d1f" text-anchor="start">RYM Grenergy</text>
+<line x1="531.0" y1="276.0" x2="936.0" y2="276.0" stroke="#d2d2d7" stroke-width="1"/>
+<text x="531.0" y="294.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="start">Six months in product management.</text>
+</g>
+</svg>
