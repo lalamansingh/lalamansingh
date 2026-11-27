@@ -9,72 +9,73 @@ text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, 
 .draw{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.6s cubic-bezier(.25,.1,.25,1) .2s forwards;}
 @keyframes draw{to{stroke-dashoffset:0}}
 </style></defs>
-<rect width="1000" height="584" rx="22" fill="#000000"/>
-<text x="40.0" y="62.0" font-size="30" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.7" class="up d1">The process.</text>
+<rect width="1000" height="584" rx="22" fill="#f5f5f7"/>
+<text x="40.0" y="62.0" font-size="30" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.7" class="up d1">The process.</text>
 <text x="40.0" y="88.0" font-size="15" font-weight="400" fill="#86868b" text-anchor="start" class="up d2">Every detail considered. From the first interview to launch day.</text>
-<line class="draw" x1="74" y1="128" x2="696.6666666666666" y2="128" stroke="#424245" stroke-width="1"/>
+<defs><filter id="lift2" x="-10%" y="-20%" width="120%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#000" flood-opacity=".07"/></filter></defs>
+<line class="draw" x1="74" y1="128" x2="696.6666666666666" y2="128" stroke="#d2d2d7" stroke-width="1"/>
 <g class="up d3">
-<circle cx="74.0" cy="128" r="12" fill="#000000" stroke="#6e6e73"/>
-<text x="74.0" y="132.0" font-size="11" font-weight="600" fill="#f5f5f7" text-anchor="middle">1</text>
-<rect x="40.0" y="158.0" width="297.3" height="290.0" rx="14" fill="#1d1d1f"/>
-<text x="62.0" y="188.0" font-size="11" font-weight="600" fill="#86868b" text-anchor="start">Step 01</text>
-<text x="62.0" y="220.0" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">Discover.</text>
-<text x="62.0" y="242.0" font-size="13" font-weight="400" fill="#86868b" text-anchor="start">Understand people first.</text>
-<line x1="62.0" y1="258.0" x2="315.3" y2="258.0" stroke="#424245" stroke-width="1"/>
-<rect x="62.5" y="274.5" width="102.2" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="113.6" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">User research</text>
-<rect x="173.7" y="274.5" width="95.8" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="221.6" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Requirements</text>
-<rect x="62.5" y="306.5" width="44.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="84.8" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">PRDs</text>
-<rect x="116.1" y="306.5" width="95.8" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="164.0" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">User stories</text>
-<rect x="220.9" y="306.5" width="44.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="243.2" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">RICE</text>
-<rect x="62.5" y="338.5" width="121.4" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="123.2" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">P0/P1 priorities</text>
-<rect x="192.9" y="338.5" width="70.2" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="228.0" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Roadmaps</text>
-<rect x="62.5" y="370.5" width="115.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="120.0" y="386.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Market research</text>
-<rect x="62.5" y="402.5" width="147.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="136.0" y="418.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Competitive analysis</text>
+<circle cx="74.0" cy="128" r="12" fill="#ffffff" stroke="#86868b"/>
+<text x="74.0" y="132.0" font-size="11" font-weight="600" fill="#1d1d1f" text-anchor="middle">1</text>
+<rect x="40.0" y="158" width="297.3" height="290" rx="14" fill="#ffffff" filter="url(#lift2)"/>
+<text x="62.0" y="188.0" font-size="11" font-weight="600" fill="#6e6e73" text-anchor="start">Step 01</text>
+<text x="62.0" y="220.0" font-size="22" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.4">Discover.</text>
+<text x="62.0" y="242.0" font-size="13" font-weight="400" fill="#6e6e73" text-anchor="start">Understand people first.</text>
+<line x1="62.0" y1="258.0" x2="315.3" y2="258.0" stroke="#d2d2d7" stroke-width="1"/>
+<rect x="62.5" y="274.5" width="102.2" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="113.6" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">User research</text>
+<rect x="173.7" y="274.5" width="95.8" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="221.6" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Requirements</text>
+<rect x="62.5" y="306.5" width="44.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="84.8" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">PRDs</text>
+<rect x="116.1" y="306.5" width="95.8" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="164.0" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">User stories</text>
+<rect x="220.9" y="306.5" width="44.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="243.2" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">RICE</text>
+<rect x="62.5" y="338.5" width="121.4" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="123.2" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">P0/P1 priorities</text>
+<rect x="192.9" y="338.5" width="70.2" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="228.0" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Roadmaps</text>
+<rect x="62.5" y="370.5" width="115.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="120.0" y="386.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Market research</text>
+<rect x="62.5" y="402.5" width="147.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="136.0" y="418.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Competitive analysis</text>
 </g>
 <g class="up d4">
-<circle cx="385.3333333333333" cy="128" r="12" fill="#000000" stroke="#6e6e73"/>
-<text x="385.3" y="132.0" font-size="11" font-weight="600" fill="#f5f5f7" text-anchor="middle">2</text>
-<rect x="351.3" y="158.0" width="297.3" height="290.0" rx="14" fill="#1d1d1f"/>
-<text x="373.3" y="188.0" font-size="11" font-weight="600" fill="#86868b" text-anchor="start">Step 02</text>
-<text x="373.3" y="220.0" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">Deliver.</text>
-<text x="373.3" y="242.0" font-size="13" font-weight="400" fill="#86868b" text-anchor="start">Ship it. Then make it better.</text>
-<line x1="373.3" y1="258.0" x2="626.7" y2="258.0" stroke="#424245" stroke-width="1"/>
-<rect x="373.8" y="274.5" width="108.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="428.1" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Product launch</text>
-<rect x="491.4" y="274.5" width="51.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="516.9" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Scrum</text>
-<rect x="551.4" y="274.5" width="57.4" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="580.1" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Kanban</text>
-<rect x="373.8" y="306.5" width="31.8" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="389.7" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">QA</text>
-<rect x="414.6" y="306.5" width="83.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="456.1" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Edge cases</text>
-<rect x="506.6" y="306.5" width="76.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="544.9" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Iteration</text>
-<rect x="373.8" y="338.5" width="159.8" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="453.7" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Cross-functional teams</text>
-<rect x="373.8" y="370.5" width="95.8" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="421.7" y="386.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Stakeholders</text>
-<rect x="478.6" y="370.5" width="134.2" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="545.7" y="386.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Tech presentations</text>
+<circle cx="385.3333333333333" cy="128" r="12" fill="#ffffff" stroke="#86868b"/>
+<text x="385.3" y="132.0" font-size="11" font-weight="600" fill="#1d1d1f" text-anchor="middle">2</text>
+<rect x="351.3" y="158" width="297.3" height="290" rx="14" fill="#ffffff" filter="url(#lift2)"/>
+<text x="373.3" y="188.0" font-size="11" font-weight="600" fill="#6e6e73" text-anchor="start">Step 02</text>
+<text x="373.3" y="220.0" font-size="22" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.4">Deliver.</text>
+<text x="373.3" y="242.0" font-size="13" font-weight="400" fill="#6e6e73" text-anchor="start">Ship it. Then make it better.</text>
+<line x1="373.3" y1="258.0" x2="626.7" y2="258.0" stroke="#d2d2d7" stroke-width="1"/>
+<rect x="373.8" y="274.5" width="108.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="428.1" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Product launch</text>
+<rect x="491.4" y="274.5" width="51.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="516.9" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Scrum</text>
+<rect x="551.4" y="274.5" width="57.4" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="580.1" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Kanban</text>
+<rect x="373.8" y="306.5" width="31.8" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="389.7" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">QA</text>
+<rect x="414.6" y="306.5" width="83.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="456.1" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Edge cases</text>
+<rect x="506.6" y="306.5" width="76.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="544.9" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Iteration</text>
+<rect x="373.8" y="338.5" width="159.8" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="453.7" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Cross-functional teams</text>
+<rect x="373.8" y="370.5" width="95.8" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="421.7" y="386.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Stakeholders</text>
+<rect x="478.6" y="370.5" width="134.2" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="545.7" y="386.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Tech presentations</text>
 </g>
 <g class="up d5">
-<circle cx="696.6666666666666" cy="128" r="12" fill="#000000" stroke="#6e6e73"/>
-<text x="696.7" y="132.0" font-size="11" font-weight="600" fill="#f5f5f7" text-anchor="middle">3</text>
-<rect x="662.7" y="158.0" width="297.3" height="290.0" rx="14" fill="#1d1d1f"/>
-<text x="684.7" y="188.0" font-size="11" font-weight="600" fill="#86868b" text-anchor="start">Step 03</text>
-<text x="684.7" y="220.0" font-size="22" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.4">Build with AI.</text>
-<text x="684.7" y="242.0" font-size="13" font-weight="400" fill="#86868b" text-anchor="start">Prototype at the speed of thought.</text>
-<line x1="684.7" y1="258.0" x2="938.0" y2="258.0" stroke="#424245" stroke-width="1"/>
-<rect x="685.2" y="274.5" width="70.2" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="720.3" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Voice AI</text>
-<rect x="764.4" y="274.5" width="108.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="818.7" y="290.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Speech-to-text</text>
-<rect x="685.2" y="306.5" width="115.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="742.7" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">LLM prototyping</text>
-<rect x="809.2" y="306.5" width="108.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="863.5" y="322.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">AI/ML products</text>
-<rect x="685.2" y="338.5" width="57.4" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="713.9" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Python</text>
-<rect x="751.6" y="338.5" width="38.2" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="770.7" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">SQL</text>
-<rect x="798.8" y="338.5" width="51.0" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="824.3" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Figma</text>
-<rect x="858.8" y="338.5" width="44.6" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="881.1" y="354.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Jira</text>
-<rect x="685.2" y="370.5" width="57.4" height="23" rx="11.5" fill="#fff" fill-opacity=".04" stroke="#424245"/><text x="713.9" y="386.0" font-size="12" font-weight="400" fill="#f5f5f7" text-anchor="middle">Notion</text>
+<circle cx="696.6666666666666" cy="128" r="12" fill="#ffffff" stroke="#86868b"/>
+<text x="696.7" y="132.0" font-size="11" font-weight="600" fill="#1d1d1f" text-anchor="middle">3</text>
+<rect x="662.7" y="158" width="297.3" height="290" rx="14" fill="#ffffff" filter="url(#lift2)"/>
+<text x="684.7" y="188.0" font-size="11" font-weight="600" fill="#6e6e73" text-anchor="start">Step 03</text>
+<text x="684.7" y="220.0" font-size="22" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.4">Build with AI.</text>
+<text x="684.7" y="242.0" font-size="13" font-weight="400" fill="#6e6e73" text-anchor="start">Prototype at the speed of thought.</text>
+<line x1="684.7" y1="258.0" x2="938.0" y2="258.0" stroke="#d2d2d7" stroke-width="1"/>
+<rect x="685.2" y="274.5" width="70.2" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="720.3" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Voice AI</text>
+<rect x="764.4" y="274.5" width="108.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="818.7" y="290.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Speech-to-text</text>
+<rect x="685.2" y="306.5" width="115.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="742.7" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">LLM prototyping</text>
+<rect x="809.2" y="306.5" width="108.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="863.5" y="322.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">AI/ML products</text>
+<rect x="685.2" y="338.5" width="57.4" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="713.9" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Python</text>
+<rect x="751.6" y="338.5" width="38.2" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="770.7" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">SQL</text>
+<rect x="798.8" y="338.5" width="51.0" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="824.3" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Figma</text>
+<rect x="858.8" y="338.5" width="44.6" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="881.1" y="354.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Jira</text>
+<rect x="685.2" y="370.5" width="57.4" height="23" rx="11.5" fill="#f5f5f7" stroke="#d2d2d7"/><text x="713.9" y="386.0" font-size="12" font-weight="400" fill="#1d1d1f" text-anchor="middle">Notion</text>
 </g>
-<g class="up d5"><rect x="40.0" y="462.0" width="453.0" height="82.0" rx="14" fill="#1d1d1f"/>
-<text x="62.0" y="490.0" font-size="11" font-weight="600" fill="#86868b" text-anchor="start">Certified</text>
-<text x="62.0" y="513.0" font-size="16" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Agile Project Management</text>
-<text x="62.0" y="531.0" font-size="12" font-weight="400" fill="#86868b" text-anchor="start">Professional Certificate, Atlassian. Aug 2026.</text>
+<g class="up d5"><rect x="40.0" y="462" width="453.0" height="82" rx="14" fill="#ffffff" filter="url(#lift2)"/>
+<text x="62.0" y="490.0" font-size="11" font-weight="600" fill="#6e6e73" text-anchor="start">Certified</text>
+<text x="62.0" y="513.0" font-size="16" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.2">Agile Project Management</text>
+<text x="62.0" y="531.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="start">Professional Certificate, Atlassian. Aug 2026.</text>
 </g>
-<g class="up d6"><rect x="507.0" y="462.0" width="453.0" height="82.0" rx="14" fill="#1d1d1f"/>
-<text x="529.0" y="490.0" font-size="11" font-weight="600" fill="#86868b" text-anchor="start">Community</text>
-<text x="529.0" y="513.0" font-size="16" font-weight="600" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Event Coordinator</text>
-<text x="529.0" y="531.0" font-size="12" font-weight="400" fill="#86868b" text-anchor="start">Lloyd Institute of Engineering and Technology. Dec 2025.</text>
+<g class="up d6"><rect x="507.0" y="462" width="453.0" height="82" rx="14" fill="#ffffff" filter="url(#lift2)"/>
+<text x="529.0" y="490.0" font-size="11" font-weight="600" fill="#6e6e73" text-anchor="start">Community</text>
+<text x="529.0" y="513.0" font-size="16" font-weight="600" fill="#1d1d1f" text-anchor="start" letter-spacing="-0.2">Event Coordinator</text>
+<text x="529.0" y="531.0" font-size="12" font-weight="400" fill="#6e6e73" text-anchor="start">Lloyd Institute of Engineering and Technology. Dec 2025.</text>
 </g>
 </svg>

@@ -128,13 +128,14 @@ WINS = [
     ("2nd", "Oct 2025", "Spark Tank", "IIFM Bhopal. Runner-up of 250+ teams.", False),
     ("3rd", "Nov 2025", "Chakravyuh B-Plan", "CVS, Delhi University. 2nd Runner-Up.", False),
     ("24h", "24-hour build", "AI HackMatrix", "Chandigarh University. Built Hardini.", False),
-    ("IITB", "Jul 2025", "NEC 2025", "National Entrepreneurship Challenge.", False),
-    ("IIMB", "Jun 2025", "Pitch Perfect, Season 8", "IIM Bangalore’s take on Shark Tank.", False),
-    ("BHU", "Sep 2025", "Bharat Innovation Conclave", "Varanasi. Pitched Aspirofy.", False),
 ]
 
-SPARK = "M0,-5 C0.6,-1 1,-0.6 5,0 C1,0.6 0.6,1 0,5 C-0.6,1 -1,0.6 -5,0 C-1,-0.6 -0.6,-1 0,-5Z"
-
+# (name, detail, x, measured SF Pro Semibold width of name at 13.5px)
+PITCHED = [
+    ("IIT Bombay", ", National Entrepreneurship Challenge", 156, 66.6),
+    ("IIM Bangalore", ", Pitch Perfect, Season 8", 480, 81.5),
+    ("BHU", ", Bharat Innovation Conclave", 744, 27.4),
+]
 
 def recognition():
     parts = [heading("Recognition.", "Eight national wins. Each one built in hours, not months.")]
@@ -152,8 +153,6 @@ def recognition():
   <stop offset=".5" stop-color="#e3893f"/><stop offset=".58" stop-color="{NEW}"/><stop offset="1" stop-color="{NEW}"/>
   <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="5s" repeatCount="indefinite"/>
 </linearGradient>
-<radialGradient id="warm"><stop offset="0" stop-color="{NEW}" stop-opacity=".16"/>
-  <stop offset="1" stop-color="{NEW}" stop-opacity="0"/></radialGradient>
 </defs>''')
     cols, th = 3, 108
     tw = (INNER - (cols - 1) * GAP) / cols
@@ -164,26 +163,27 @@ def recognition():
         d = 3 + i % cols + i // cols
         parts.append(f'<g class="up d{min(d, 6)}">')
         parts.append(f'<rect x="{x:.1f}" y="{y}" width="{tw:.1f}" height="{th}" rx="14" fill="{TILE}" filter="url(#lift)"/>')
-        if first:
-            parts.append(f'<clipPath id="c{i}"><rect x="{x:.1f}" y="{y}" width="{tw:.1f}" height="{th}" rx="14"/></clipPath>')
-            parts.append(f'<circle class="breathe" style="animation-delay:-{i * 1.3:.1f}s" clip-path="url(#c{i})" '
-                         f'cx="{ix + 26:.1f}" cy="{y + 32}" r="58" fill="url(#warm)"/>')
-            for k, (dx, dy, sc) in enumerate([(66, -14, 1), (60, 6, .6)]):
-                parts.append(f'<path class="twinkle" style="animation-delay:{i * 1.1 + k * 1.7:.1f}s" d="{SPARK}" '
-                             f'fill="{NEW}" transform="translate({ix + dx:.1f} {y + 32 + dy}) scale({sc})"/>')
         parts.append(t(ix, y + 44, big, 30, 600, "url(#sheenNew)" if first else "url(#sheenInk)", ls=-.8))
         parts.append(t(x + tw - 20, y + 28, note, 11, 500, NEW if first else GRAY2, "end"))
         parts.append(t(ix, y + 74, title, 16, 600, INK, ls=-.25))
         parts.append(t(ix, y + 93, sub, 12.5, 400, GRAY))
         parts.append("</g>")
-    end = HEAD_H + 3 * th + 2 * GAP
+    rows = (len(WINS) + cols - 1) // cols
+    ly = HEAD_H + rows * th + (rows - 1) * GAP + 40
+    parts.append(t(PAD, ly, "Also pitched at", 13.5, 400, GRAY, cls="up d6"))
+    for k, (name, det, x, w) in enumerate(PITCHED):
+        hw = w * 1.03 + 6
+        parts.append(f'<rect class="mark" style="animation-delay:{.7 + k * .45:.2f}s" x="{x - 3}" y="{ly - 12.5}" '
+                     f'width="{hw:.1f}" height="17" rx="3" fill="#ffcc00" fill-opacity=".42"/>')
+        parts.append(f'<text x="{x}" y="{ly}" font-size="13.5" class="up d6">'
+                     f'<tspan font-weight="600" fill="{INK}">{escape(name)}</tspan>'
+                     f'<tspan font-weight="400" fill="{GRAY}">{escape(det)}</tspan></text>')
     css = """
-.breathe{animation:breathe 6s ease-in-out infinite alternate;}
-@keyframes breathe{0%{opacity:.55}100%{opacity:1}}
-.twinkle{opacity:0;animation:twinkle 5.5s ease-in-out infinite;transform-box:fill-box;}
-@keyframes twinkle{0%,100%{opacity:0}45%{opacity:0}55%{opacity:.55}65%{opacity:0}}
+.mark{transform:scaleX(0);transform-box:fill-box;transform-origin:left center;
+  animation:mark .7s cubic-bezier(.3,.6,.3,1) forwards;}
+@keyframes mark{to{transform:scaleX(1)}}
 """
-    return frame(end + PAD, "\n".join(parts), CANVAS, css)
+    return frame(ly + 34, "\n".join(parts), CANVAS, css)
 
 
 # =====================================================================
@@ -247,9 +247,8 @@ def projects():
 
 
 # =====================================================================
-# 4. THE PROCESS (black panel, Apple Pro style)
+# 4. THE PROCESS
 # =====================================================================
-TILE_DARK = "#1d1d1f"
 
 STEPS = [
     ("Discover.", "Understand people first.",
@@ -264,22 +263,24 @@ STEPS = [
 ]
 
 
-def dark_pill(x, y, label, h=24):
+def chip(x, y, label, h=24):
     w = 20 + len(label) * 6.4
     return w, (f'<rect x="{x + .5:.1f}" y="{y + .5:.1f}" width="{w - 1:.1f}" height="{h - 1}" rx="{(h - 1) / 2}" '
-               f'fill="#fff" fill-opacity=".04" stroke="{HAIR_DARK}"/>' +
-               t(x + w / 2, y + h / 2 + 4, label, 12, 400, INK_DARK, "middle"))
+               f'fill="{CANVAS}" stroke="{HAIR}"/>' +
+               t(x + w / 2, y + h / 2 + 4, label, 12, 400, INK, "middle"))
 
 
 def process():
-    parts = [t(PAD, 62, "The process.", 30, 600, INK_DARK, ls=-.7, cls="up d1"),
+    parts = [t(PAD, 62, "The process.", 30, 600, INK, ls=-.7, cls="up d1"),
              t(PAD, 88, "Every detail considered. From the first interview to launch day.", 15, 400, GRAY2,
                cls="up d2")]
     tw = (INNER - 2 * GAP) / 3
+    parts.append('<defs><filter id="lift2" x="-10%" y="-20%" width="120%" height="150%">'
+                 '<feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#000" flood-opacity=".07"/></filter></defs>')
     ly = 128
     # timeline that draws itself, with numbered nodes
     parts.append(f'<line class="draw" x1="{PAD + 34}" y1="{ly}" x2="{PAD + 2 * (tw + GAP) + 34}" y2="{ly}" '
-                 f'stroke="{HAIR_DARK}" stroke-width="1"/>')
+                 f'stroke="{HAIR}" stroke-width="1"/>')
     y = 158
 
     def rows(chips):
@@ -296,19 +297,19 @@ def process():
         x = PAD + i * (tw + GAP)
         ix = x + 22
         parts.append(f'<g class="up d{3 + i}">')
-        parts.append(f'<circle cx="{x + 34}" cy="{ly}" r="12" fill="{BLACK}" stroke="{GRAY}"/>')
-        parts.append(t(x + 34, ly + 4, str(i + 1), 11, 600, INK_DARK, "middle"))
-        parts.append(tile(x, y, tw, th, TILE_DARK))
-        parts.append(t(ix, y + 30, f"Step {i + 1:02d}", 11, 600, GRAY2))
-        parts.append(t(ix, y + 62, title, 22, 600, INK_DARK, ls=-.4))
-        parts.append(t(ix, y + 84, line, 13, 400, GRAY2))
-        parts.append(hair(ix, y + 100, x + tw - 22, y + 100, HAIR_DARK))
+        parts.append(f'<circle cx="{x + 34}" cy="{ly}" r="12" fill="{TILE}" stroke="{GRAY2}"/>')
+        parts.append(t(x + 34, ly + 4, str(i + 1), 11, 600, INK, "middle"))
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{tw:.1f}" height="{th}" rx="14" fill="{TILE}" filter="url(#lift2)"/>')
+        parts.append(t(ix, y + 30, f"Step {i + 1:02d}", 11, 600, GRAY))
+        parts.append(t(ix, y + 62, title, 22, 600, INK, ls=-.4))
+        parts.append(t(ix, y + 84, line, 13, 400, GRAY))
+        parts.append(hair(ix, y + 100, x + tw - 22, y + 100, HAIR))
         cx, cy = ix, y + 116
         for c in chips:
             w = 20 + len(c) * 6.4
             if cx + w > x + tw - 22:
                 cx, cy = ix, cy + 32
-            _, svg = dark_pill(cx, cy, c)
+            _, svg = chip(cx, cy, c)
             parts.append(svg)
             cx += w + 8
         parts.append("</g>")
@@ -320,16 +321,16 @@ def process():
     for i, (eb, title, sub) in enumerate(blocks):
         x = PAD + i * (bw + GAP)
         ix = x + 22
-        parts.append(f'<g class="up d{5 + i}">{tile(x, by, bw, bh, TILE_DARK)}')
-        parts.append(t(ix, by + 28, eb, 11, 600, GRAY2))
-        parts.append(t(ix, by + 51, title, 16, 600, INK_DARK, ls=-.2))
-        parts.append(t(ix, by + 69, sub, 12, 400, GRAY2))
+        parts.append(f'<g class="up d{5 + i}">{f'<rect x="{x:.1f}" y="{by}" width="{bw:.1f}" height="{bh}" rx="14" fill="{TILE}" filter="url(#lift2)"/>'}')
+        parts.append(t(ix, by + 28, eb, 11, 600, GRAY))
+        parts.append(t(ix, by + 51, title, 16, 600, INK, ls=-.2))
+        parts.append(t(ix, by + 69, sub, 12, 400, GRAY))
         parts.append("</g>")
     css = """
 .draw{stroke-dasharray:700;stroke-dashoffset:700;animation:draw 1.6s cubic-bezier(.25,.1,.25,1) .2s forwards;}
 @keyframes draw{to{stroke-dashoffset:0}}
 """
-    return frame(by + bh + PAD, "\n".join(parts), BLACK, css)
+    return frame(by + bh + PAD, "\n".join(parts), CANVAS, css)
 
 
 # =====================================================================
