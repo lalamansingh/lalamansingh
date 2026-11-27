@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img">
+<defs>
+<style>
+text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, Inter, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;}
+.up{animation:up 1.1s cubic-bezier(.16,1,.3,1) both;}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}
+.d4{animation-delay:.38s}.d5{animation-delay:.48s}.d6{animation-delay:.58s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.drift1{animation:drift1 14s ease-in-out infinite alternate;}
+.drift2{animation:drift2 17s ease-in-out infinite alternate;}
+.drift3{animation:drift3 12s ease-in-out infinite alternate;}
+@keyframes drift1{to{transform:translate(70px,-18px)}}
+@keyframes drift2{to{transform:translate(-80px,10px)}}
+@keyframes drift3{to{transform:translate(40px,14px)}}
+.pulse{animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center;}
+@keyframes pulse{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+
+.bar{animation:wave 1.6s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
+@keyframes wave{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
+.breathe{animation:breathe 5s ease-in-out infinite alternate;transform-box:fill-box;transform-origin:center;}
+@keyframes breathe{0%{transform:scale(.85);opacity:.22}100%{transform:scale(1.1);opacity:.42}}
+.greet{opacity:0;animation:greet 9s ease-in-out infinite;}
+@keyframes greet{0%,100%{opacity:0}12%,40%{opacity:.85}55%{opacity:0}}
+</style>
+<clipPath id="card"><rect x="0" y="0" width="1000" height="560" rx="30"/></clipPath>
+<filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="56"/></filter>
+<filter id="blurS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
+<linearGradient id="ai" gradientUnits="userSpaceOnUse" x1="180" y1="0" x2="820" y2="0" spreadMethod="reflect"><stop offset="0.00" stop-color="#ff9f0a"/><stop offset="0.25" stop-color="#ff375f"/><stop offset="0.50" stop-color="#bf5af2"/><stop offset="0.75" stop-color="#5e5ce6"/><stop offset="1.00" stop-color="#0a84ff"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;640 0;0 0" dur="14s" repeatCount="indefinite"/></linearGradient>
+<linearGradient id="aiV" gradientUnits="userSpaceOnUse" x1="630" y1="0" x2="890" y2="0"><stop offset="0.00" stop-color="#ff9f0a"/><stop offset="0.25" stop-color="#ff375f"/><stop offset="0.50" stop-color="#bf5af2"/><stop offset="0.75" stop-color="#5e5ce6"/><stop offset="1.00" stop-color="#0a84ff"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1000" height="560" rx="30" fill="#000000"/>
+<g clip-path="url(#card)">
+
+<circle class="breathe" cx="760" cy="280" r="150" fill="url(#ai)" opacity=".34" filter="url(#blur)"/>
+<circle cx="760" cy="280" r="118" fill="none" stroke="#fff" stroke-opacity=".10"/>
+<circle cx="760" cy="280" r="178" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<circle cx="760" cy="280" r="238" fill="none" stroke="#fff" stroke-opacity=".035"/>
+<line class="bar" style="animation-delay:-0.99s" x1="639" y1="271.0" x2="639" y2="289.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.90s" x1="650" y1="265.0" x2="650" y2="295.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.81s" x1="661" y1="257.0" x2="661" y2="303.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.72s" x1="672" y1="248.0" x2="672" y2="312.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.63s" x1="683" y1="254.0" x2="683" y2="306.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.54s" x1="694" y1="238.0" x2="694" y2="322.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.45s" x1="705" y1="228.0" x2="705" y2="332.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.36s" x1="716" y1="244.0" x2="716" y2="316.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.27s" x1="727" y1="221.0" x2="727" y2="339.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.18s" x1="738" y1="234.0" x2="738" y2="326.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.09s" x1="749" y1="215.0" x2="749" y2="345.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.00s" x1="760" y1="224.0" x2="760" y2="336.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.09s" x1="771" y1="215.0" x2="771" y2="345.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.18s" x1="782" y1="234.0" x2="782" y2="326.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.27s" x1="793" y1="221.0" x2="793" y2="339.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.36s" x1="804" y1="244.0" x2="804" y2="316.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.45s" x1="815" y1="228.0" x2="815" y2="332.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.54s" x1="826" y1="238.0" x2="826" y2="322.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.63s" x1="837" y1="254.0" x2="837" y2="306.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.72s" x1="848" y1="248.0" x2="848" y2="312.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.81s" x1="859" y1="257.0" x2="859" y2="303.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.90s" x1="870" y1="265.0" x2="870" y2="295.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/><line class="bar" style="animation-delay:-0.99s" x1="881" y1="271.0" x2="881" y2="289.0" stroke="url(#aiV)" stroke-width="5" stroke-linecap="round"/>
+<text class="greet" style="animation-delay:0s" x="610" y="140" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">नमस्ते</text><text class="greet" style="animation-delay:1.5s" x="880" y="162" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">ਸਤ ਸ੍ਰੀ ਅਕਾਲ</text><text class="greet" style="animation-delay:3s" x="600" y="440" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">வணக்கம்</text><text class="greet" style="animation-delay:4.5s" x="890" y="430" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">నమస్కారం</text><text class="greet" style="animation-delay:6s" x="928" y="292" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">নমস্কার</text><text class="greet" style="animation-delay:7.5s" x="560" y="290" font-size="17" font-weight="500" fill="#f5f5f7" text-anchor="middle">Hello</text>
+<text x="64" y="120" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.4" class="up d1">FEATURED PROJECT</text>
+<text x="60" y="198" font-size="76" font-weight="800" fill="#f5f5f7" text-anchor="start" letter-spacing="-3" class="up d2">Hardini.</text>
+<text x="64" y="246" font-size="24" font-weight="600" fill="#d2d2d7" text-anchor="start" letter-spacing="-0.4" class="up d3">Voice AI for every farmer in Bharat.</text>
+<text x="64" y="294" font-size="17" font-weight="400" fill="#86868b" text-anchor="start" class="up d4">Crop diseases, mandi prices, weather and</text>
+<text x="64" y="318" font-size="17" font-weight="400" fill="#86868b" text-anchor="start" class="up d4">government schemes, in the farmer’s own language.</text>
+<g class="up d5"><rect x="64.5" y="352.5" width="147" height="35" rx="17.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="138.0" y="375.04" font-size="14" font-weight="600" fill="#f5f5f7" text-anchor="middle">Real-time voice</text><rect x="222.5" y="352.5" width="123" height="35" rx="17.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="284.0" y="375.04" font-size="14" font-weight="600" fill="#f5f5f7" text-anchor="middle">Multilingual</text><rect x="356.5" y="352.5" width="117" height="35" rx="17.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="415.0" y="375.04" font-size="14" font-weight="600" fill="#f5f5f7" text-anchor="middle">Built in 24h</text></g>
+<g class="up d6">
+<line x1="64" y1="430" x2="476" y2="430" stroke="#fff" stroke-opacity=".08"/>
+<circle cx="68" cy="463" r="4" fill="url(#ai)"/>
+<text x="82" y="468" font-size="14" font-weight="500" fill="#a1a1a6" text-anchor="start">1st Runner-Up, Spark Tank, IIFM Bhopal (250+ teams)</text>
+<circle cx="68" cy="491" r="4" fill="url(#ai)"/>
+<text x="82" y="496" font-size="14" font-weight="500" fill="#a1a1a6" text-anchor="start">Built in 24 hours at AI HackMatrix, Chandigarh University</text>
+</g>
+
+</g>
+<rect x=".5" y=".5" width="999" height="559" rx="29.5" fill="none" stroke="#fff" stroke-opacity=".09"/>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="776" viewBox="0 0 1000 776" role="img">
+<defs>
+<style>
+text{font-family:-apple-system, BlinkMacSystemFont, &quot;SF Pro Display&quot;, &quot;SF Pro Text&quot;, Inter, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;}
+.up{animation:up 1.1s cubic-bezier(.16,1,.3,1) both;}
+.d1{animation-delay:.08s}.d2{animation-delay:.18s}.d3{animation-delay:.28s}
+.d4{animation-delay:.38s}.d5{animation-delay:.48s}.d6{animation-delay:.58s}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.drift1{animation:drift1 14s ease-in-out infinite alternate;}
+.drift2{animation:drift2 17s ease-in-out infinite alternate;}
+.drift3{animation:drift3 12s ease-in-out infinite alternate;}
+@keyframes drift1{to{transform:translate(70px,-18px)}}
+@keyframes drift2{to{transform:translate(-80px,10px)}}
+@keyframes drift3{to{transform:translate(40px,14px)}}
+.pulse{animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center;}
+@keyframes pulse{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+</style>
+<clipPath id="card"><rect x="0" y="0" width="1000" height="776" rx="30"/></clipPath>
+<filter id="blur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="56"/></filter>
+<filter id="blurS" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="34"/></filter>
+<linearGradient id="ai" gradientUnits="userSpaceOnUse" x1="180" y1="0" x2="820" y2="0" spreadMethod="reflect"><stop offset="0.00" stop-color="#ff9f0a"/><stop offset="0.25" stop-color="#ff375f"/><stop offset="0.50" stop-color="#bf5af2"/><stop offset="0.75" stop-color="#5e5ce6"/><stop offset="1.00" stop-color="#0a84ff"/><animateTransform attributeName="gradientTransform" type="translate" values="0 0;640 0;0 0" dur="14s" repeatCount="indefinite"/></linearGradient>
+
+</defs>
+<rect x="0" y="0" width="1000" height="776" rx="30" fill="#000000"/>
+<g clip-path="url(#card)">
+<text x="56" y="104" font-size="52" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-1.6" class="up d1">How I work.</text><text x="56" y="142" font-size="21" font-weight="400" fill="#86868b" text-anchor="start" class="up d2">From user research to launch, with AI in the loop.</text>
+<g class="up d3"><rect x="56.0" y="180" width="285.3333333333333" height="352" rx="22" fill="#161617"/><rect x="56.5" y="180.5" width="284.3333333333333" height="351" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<text x="86.0" y="230" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.2">PRODUCT</text>
+<circle cx="90.0" cy="274.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="280" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">User research</text>
+<circle cx="90.0" cy="310.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="316" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Requirements &amp; PRDs</text>
+<circle cx="90.0" cy="346.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="352" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">User stories</text>
+<circle cx="90.0" cy="382.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="388" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">RICE · P0/P1 priorities</text>
+<circle cx="90.0" cy="418.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="424" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Roadmaps</text>
+<circle cx="90.0" cy="454.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="460" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Market research</text>
+<circle cx="90.0" cy="490.5" r="2.5" fill="url(#ai)"/>
+<text x="104.0" y="496" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Competitive analysis</text>
+</g>
+<g class="up d4"><rect x="357.3333333333333" y="180" width="285.3333333333333" height="352" rx="22" fill="#161617"/><rect x="357.8333333333333" y="180.5" width="284.3333333333333" height="351" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<text x="387.3333333333333" y="230" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.2">DELIVERY</text>
+<circle cx="391.3333333333333" cy="274.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="280" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Product launch</text>
+<circle cx="391.3333333333333" cy="310.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="316" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Agile · Scrum &amp; Kanban</text>
+<circle cx="391.3333333333333" cy="346.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="352" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Testing, QA &amp; edge cases</text>
+<circle cx="391.3333333333333" cy="382.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="388" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Iterative development</text>
+<circle cx="391.3333333333333" cy="418.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="424" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Cross-functional work</text>
+<circle cx="391.3333333333333" cy="454.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="460" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Stakeholder updates</text>
+<circle cx="391.3333333333333" cy="490.5" r="2.5" fill="url(#ai)"/>
+<text x="405.3333333333333" y="496" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Technical presentations</text>
+</g>
+<g class="up d5"><rect x="658.6666666666666" y="180" width="285.3333333333333" height="352" rx="22" fill="#161617"/><rect x="659.1666666666666" y="180.5" width="284.3333333333333" height="351" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<text x="688.6666666666666" y="230" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.2">AI &amp; TOOLS</text>
+<circle cx="692.6666666666666" cy="274.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="280" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Voice AI &amp; speech-to-text</text>
+<circle cx="692.6666666666666" cy="310.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="316" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">LLM prototyping</text>
+<circle cx="692.6666666666666" cy="346.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="352" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">AI/ML product design</text>
+<circle cx="692.6666666666666" cy="382.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="388" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Python for automation</text>
+<circle cx="692.6666666666666" cy="418.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="424" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">SQL (basic)</text>
+<circle cx="692.6666666666666" cy="454.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="460" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Figma flows &amp; wireframes</text>
+<circle cx="692.6666666666666" cy="490.5" r="2.5" fill="url(#ai)"/>
+<text x="706.6666666666666" y="496" font-size="16.5" font-weight="500" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.2">Jira · Notion</text>
+</g>
+<g class="up d5">
+<rect x="56" y="548" width="436.0" height="172" rx="22" fill="#161617"/><rect x="56.5" y="548.5" width="435.0" height="171" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<text x="88" y="594" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.2">CERTIFIED</text>
+<text x="88" y="634" font-size="23" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.5">Agile Project Management</text>
+<text x="88" y="662" font-size="15" font-weight="400" fill="#a1a1a6" text-anchor="start">Professional Certificate  ·  Atlassian</text>
+<text x="88" y="694" font-size="13" font-weight="500" fill="#6e6e73" text-anchor="start">Issued Aug 2026</text>
+<rect x="312.5" y="672.5" width="75" height="29" rx="14.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="350.0" y="691.68" font-size="13" font-weight="600" fill="#f5f5f7" text-anchor="middle">Agile</text>
+<rect x="396.5" y="672.5" width="63" height="29" rx="14.5" fill="#fff" fill-opacity=".04" stroke="#fff" stroke-opacity=".22"/><text x="428.0" y="691.68" font-size="13" font-weight="600" fill="#f5f5f7" text-anchor="middle">Jira</text>
+</g>
+<g class="up d6">
+<rect x="508.0" y="548" width="436.0" height="172" rx="22" fill="#161617"/><rect x="508.5" y="548.5" width="435.0" height="171" rx="21.5" fill="none" stroke="#fff" stroke-opacity=".06"/>
+<text x="540.0" y="594" font-size="13" font-weight="700" fill="url(#ai)" text-anchor="start" letter-spacing="2.2">BEYOND WORK</text>
+<text x="540.0" y="634" font-size="23" font-weight="700" fill="#f5f5f7" text-anchor="start" letter-spacing="-0.5">Event Coordinator</text>
+<text x="540.0" y="662" font-size="15" font-weight="400" fill="#a1a1a6" text-anchor="start">Lloyd Institute of Engineering and Technology</text>
+<text x="540.0" y="694" font-size="13" font-weight="500" fill="#6e6e73" text-anchor="start">Dec 2025</text>
+</g>
+</g>
+<rect x=".5" y=".5" width="999" height="775" rx="29.5" fill="none" stroke="#fff" stroke-opacity=".09"/>
+</svg>
