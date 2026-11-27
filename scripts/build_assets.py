@@ -399,3 +399,14 @@ if __name__ == "__main__":
     for name, fn in PANELS.items():
         (OUT / f"{name}.svg").write_text(fn(), encoding="utf-8")
         print("wrote", OUT / f"{name}.svg")
+
+    # Cache-bust: give every README image a content hash so browsers and GitHub's
+    # image proxy fetch the new file whenever a panel changes.
+    import hashlib
+    import re
+    readme = OUT.parent / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    for name in PANELS:
+        digest = hashlib.sha1((OUT / f"{name}.svg").read_bytes()).hexdigest()[:8]
+        text = re.sub(rf'assets/{name}\.svg(\?v=[0-9a-f]+)?"', f'assets/{name}.svg?v={digest}"', text)
+    readme.write_text(text, encoding="utf-8")
