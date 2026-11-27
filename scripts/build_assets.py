@@ -118,36 +118,72 @@ def intro():
 
 
 # =====================================================================
-# 2. RECOGNITION (compact)
+# 2. RECOGNITION (3x3, soft glow)
 # =====================================================================
+# (big label, top-right note, title, subtitle, is_first_place)
 WINS = [
-    ("1st", "Design Spark Challenge", "Intellect Design Arena, Chennai."),
-    ("1st", "National Level Tech Hackathon", "Kanpur. Oct 2025."),
-    ("1st", "AI Product Builder", "Jivika Future Work. Jul 2025."),
-    ("2nd", "Spark Tank, IIFM Bhopal", "Runner-up of 250+ teams. Oct 2025."),
-    ("3rd", "Chakravyuh B-Plan", "CVS, Delhi University. Nov 2025."),
-    ("24h", "AI HackMatrix", "Chandigarh University."),
+    ("1st", "Cash award + internship", "Design Spark Challenge", "Intellect Design Arena, Chennai.", True),
+    ("1st", "Oct 2025", "National Level Tech Hackathon", "Dr. Virendra Swarup Institute, Kanpur.", True),
+    ("1st", "Jul 2025", "AI Product Builder", "Jivika Future Work Pvt. Ltd.", True),
+    ("2nd", "Oct 2025", "Spark Tank", "IIFM Bhopal. Runner-up of 250+ teams.", False),
+    ("3rd", "Nov 2025", "Chakravyuh B-Plan", "CVS, Delhi University. 2nd Runner-Up.", False),
+    ("24h", "24-hour build", "AI HackMatrix", "Chandigarh University. Built Hardini.", False),
+    ("IITB", "Jul 2025", "NEC 2025", "National Entrepreneurship Challenge.", False),
+    ("IIMB", "Jun 2025", "Pitch Perfect, Season 8", "IIM Bangalore’s take on Shark Tank.", False),
+    ("BHU", "Sep 2025", "Bharat Innovation Conclave", "Varanasi. Pitched Aspirofy.", False),
 ]
+
+SPARK = "M0,-5 C0.6,-1 1,-0.6 5,0 C1,0.6 0.6,1 0,5 C-0.6,1 -1,0.6 -5,0 C-1,-0.6 -0.6,-1 0,-5Z"
 
 
 def recognition():
     parts = [heading("Recognition.", "Eight national wins. Each one built in hours, not months.")]
-    cols, th = 3, 62
+    parts.append(f'''<defs>
+<filter id="lift" x="-10%" y="-20%" width="120%" height="150%">
+  <feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#000" flood-opacity=".07"/>
+</filter>
+<linearGradient id="sheenInk" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="{INK}"/><stop offset=".42" stop-color="{INK}"/>
+  <stop offset=".5" stop-color="#8e8e93"/><stop offset=".58" stop-color="{INK}"/><stop offset="1" stop-color="{INK}"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="5s" repeatCount="indefinite"/>
+</linearGradient>
+<linearGradient id="sheenNew" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+  <stop offset="0" stop-color="{NEW}"/><stop offset=".42" stop-color="{NEW}"/>
+  <stop offset=".5" stop-color="#e3893f"/><stop offset=".58" stop-color="{NEW}"/><stop offset="1" stop-color="{NEW}"/>
+  <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0" dur="5s" repeatCount="indefinite"/>
+</linearGradient>
+<radialGradient id="warm"><stop offset="0" stop-color="{NEW}" stop-opacity=".16"/>
+  <stop offset="1" stop-color="{NEW}" stop-opacity="0"/></radialGradient>
+</defs>''')
+    cols, th = 3, 108
     tw = (INNER - (cols - 1) * GAP) / cols
-    for i, (rank, title, sub) in enumerate(WINS):
+    for i, (big, note, title, sub, first) in enumerate(WINS):
         x = PAD + (i % cols) * (tw + GAP)
         y = HEAD_H + (i // cols) * (th + GAP)
-        parts.append(f'''<g class="up d{3 + i % cols}">
-{tile(x, y, tw, th)}
-{t(x + 20, y + 40, rank, 24, 600, NEW if i == 0 else INK, ls=-.6)}
-{hair(x + 72, y + 16, x + 72, y + th - 16)}
-{t(x + 88, y + 28, title, 14, 600, INK, ls=-.2)}
-{t(x + 88, y + 46, sub, 11.5, 400, GRAY)}
-</g>''')
-    end = HEAD_H + 2 * th + GAP
-    parts.append(t(PAD, end + 34, "Also pitched at IIT Bombay, National Entrepreneurship Challenge  ·  "
-                   "IIM Bangalore, Pitch Perfect S8  ·  BHU, Bharat Innovation Conclave", 12, 400, GRAY, cls="up d6"))
-    return frame(end + 58, "\n".join(parts))
+        ix = x + 22
+        d = 3 + i % cols + i // cols
+        parts.append(f'<g class="up d{min(d, 6)}">')
+        parts.append(f'<rect x="{x:.1f}" y="{y}" width="{tw:.1f}" height="{th}" rx="14" fill="{TILE}" filter="url(#lift)"/>')
+        if first:
+            parts.append(f'<clipPath id="c{i}"><rect x="{x:.1f}" y="{y}" width="{tw:.1f}" height="{th}" rx="14"/></clipPath>')
+            parts.append(f'<circle class="breathe" style="animation-delay:-{i * 1.3:.1f}s" clip-path="url(#c{i})" '
+                         f'cx="{ix + 26:.1f}" cy="{y + 32}" r="58" fill="url(#warm)"/>')
+            for k, (dx, dy, sc) in enumerate([(66, -14, 1), (60, 6, .6)]):
+                parts.append(f'<path class="twinkle" style="animation-delay:{i * 1.1 + k * 1.7:.1f}s" d="{SPARK}" '
+                             f'fill="{NEW}" transform="translate({ix + dx:.1f} {y + 32 + dy}) scale({sc})"/>')
+        parts.append(t(ix, y + 44, big, 30, 600, "url(#sheenNew)" if first else "url(#sheenInk)", ls=-.8))
+        parts.append(t(x + tw - 20, y + 28, note, 11, 500, NEW if first else GRAY2, "end"))
+        parts.append(t(ix, y + 74, title, 16, 600, INK, ls=-.25))
+        parts.append(t(ix, y + 93, sub, 12.5, 400, GRAY))
+        parts.append("</g>")
+    end = HEAD_H + 3 * th + 2 * GAP
+    css = """
+.breathe{animation:breathe 6s ease-in-out infinite alternate;}
+@keyframes breathe{0%{opacity:.55}100%{opacity:1}}
+.twinkle{opacity:0;animation:twinkle 5.5s ease-in-out infinite;transform-box:fill-box;}
+@keyframes twinkle{0%,100%{opacity:0}45%{opacity:0}55%{opacity:.55}65%{opacity:0}}
+"""
+    return frame(end + PAD, "\n".join(parts), CANVAS, css)
 
 
 # =====================================================================

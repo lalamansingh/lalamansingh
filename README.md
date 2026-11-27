@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/recognition.svg" width="100%" alt="Recognition: 1st, Design Spark Challenge, Intellect Design Arena. 1st, National Level Tech Hackathon, Kanpur. 1st, AI Product Builder, Jivika Future Work. 2nd, Spark Tank, IIFM Bhopal (250+ teams). 3rd, Chakravyuh B-Plan, CVS Delhi University. AI HackMatrix, Chandigarh University. Also pitched at IIT Bombay, IIM Bangalore and BHU." />
+  <img src="assets/recognition.svg" width="100%" alt="Recognition: 1st, Design Spark Challenge, Intellect Design Arena, Chennai (cash award and internship). 1st, National Level Tech Hackathon, Kanpur (Oct 2025). 1st, AI Product Builder, Jivika Future Work (Jul 2025). 2nd, Spark Tank, IIFM Bhopal, 250+ teams (Oct 2025). 3rd, Chakravyuh B-Plan, CVS Delhi University (Nov 2025). AI HackMatrix, Chandigarh University. NEC 2025, IIT Bombay (Jul 2025). Pitch Perfect S8, IIM Bangalore (Jun 2025). Bharat Innovation Conclave, BHU (Sep 2025)." />
 </p>
 
 <p align="center">
