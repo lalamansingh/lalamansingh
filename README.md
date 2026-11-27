@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/intro.svg" width="100%" alt="Lal Aman Singh. AI Product Intern at IndusLabs. Noida, India. 8 national hackathon wins, 2 product internships. Current: AI Product Intern, IndusLabs (Aug 2026 – Present). Previous: Product Manager Intern, RYM Grenergy (Feb – Jul 2026)." />
+  <img src="assets/intro.svg" width="100%" alt="Lal Aman Singh. Product Thinking &amp; User-Centric Design. Bridging users, tech and business. AI Product Intern at IndusLabs, Noida, India. 8 national hackathon wins, 2 product internships. Current: AI Product Intern, IndusLabs (Aug 2026 – Present). Previous: Product Manager Intern, RYM Grenergy (Feb – Jul 2026)." />
 </p>
 
 <p align="center">

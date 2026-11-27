@@ -82,21 +82,30 @@ HEAD_H = 110  # where tiles start below a heading
 def intro():
     parts = [
         t(PAD, 84, "Lal Aman Singh", 50, 600, INK, ls=-1.4, cls="up d1"),
-        t(PAD, 116, "AI Product Intern at IndusLabs.", 18, 400, INK, ls=-.2, cls="up d2"),
-        t(PAD, 140, "Noida, India", 14, 400, GRAY, cls="up d2"),
+        t(PAD, 118, "Product Thinking & User-Centric Design.", 20, 400, INK, ls=-.3, cls="up d2"),
+        t(PAD, 145, "Bridging users ⇄ tech ⇄ business.", 15, 400, GRAY, cls="up d2"),
+        t(PAD, 170, "AI Product Intern at IndusLabs  ·  Noida, India", 13, 400, GRAY2, cls="up d3"),
     ]
+    # highlighted "at a glance" box
     stats = [("8", "National", "hackathon wins"), ("2", "Product", "internships")]
-    sw = 150
-    sx = W - PAD - sw * len(stats)
+    sw, bh = 150, 128
+    bw = sw * len(stats) + 20
+    bx, by = W - PAD - bw, 44
+    parts.append(f'''<g class="up d3">
+<defs><filter id="liftI" x="-15%" y="-20%" width="130%" height="150%">
+<feDropShadow dx="0" dy="4" stdDeviation="9" flood-color="#000" flood-opacity=".08"/></filter></defs>
+<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="16" fill="{TILE}" filter="url(#liftI)"/>
+{t(bx + 22, by + 28, "At a glance", 11, 600, NEW)}''')
     for i, (n, l1, l2) in enumerate(stats):
-        cx = sx + i * sw + sw / 2
-        parts.append(t(cx, 90, n, 32, 600, INK, "middle", -.8, f"up d{i + 2}"))
-        parts.append(t(cx, 114, l1, 12, 400, GRAY, "middle", 0, f"up d{i + 2}"))
-        parts.append(t(cx, 130, l2, 12, 400, GRAY, "middle", 0, f"up d{i + 2}"))
+        cx = bx + 10 + i * sw + sw / 2
+        parts.append(t(cx, by + 72, n, 38, 600, INK, "middle", -1))
+        parts.append(t(cx, by + 95, l1, 12, 400, GRAY, "middle"))
+        parts.append(t(cx, by + 111, l2, 12, 400, GRAY, "middle"))
         if i:
-            parts.append(hair(sx + i * sw, 60, sx + i * sw, 132))
+            parts.append(hair(bx + 10 + i * sw, by + 46, bx + 10 + i * sw, by + 112))
+    parts.append("</g>")
 
-    y, th = 176, 128
+    y, th = 196, 128
     tw = (INNER - GAP) / 2
     jobs = [("Current", NEW, "Aug 2026 – Present · On-site, Noida", "AI Product Intern", "IndusLabs",
              "Shaping voice AI agents that speak India’s languages."),
